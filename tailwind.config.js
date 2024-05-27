@@ -2,6 +2,7 @@
 module.exports = {
   content: [
     './header.php',
+    './home.php',
     './index.php',
     './footer.php',
     './404.php',
@@ -11,13 +12,14 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      transducer: ['transducer', 'sans-serif'],
-      transducerCondensed: ['transducer-condensed', 'sans-serif'],
-      transducerExtended: ['transducer-extended', 'sans-serif'],
+      monumentExtend: ['PP Monument Extended', 'sans-serif'],
+      neueMachina: ['PP Neue Machina Inktrap', 'sans-serif'],
     },
     extend: {
       colors: {
-        'red': '#14A5BB',
+        'light': '#F2F2F2',
+        'dark': '#050505',
+        'red': '#EC302E',
       },
     },
   },

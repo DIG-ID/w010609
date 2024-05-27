@@ -1,0 +1,16 @@
+.btn-cta
+  @apply font-monumentExtend font-bold text-red text-[42px] uppercase py-4 border-[2px] border-red rounded-[240px] transition-all duration-300 ease-in-out flex justify-center items-center w-[716px] overflow-hidden bg-transparent
+  -moz-appearance: none
+  -webkit-appearance: none
+  &:focus,
+  &--hover
+    @apply outline-none text-dark 
+  &__deco
+    @apply absolute top-0 left-0 w-full h-full overflow-hidden
+    &-filler
+      @apply absolute w-[150%] h-[200%] rounded-[50%] -top-1/2 -left-1/4 bg-red
+      transform: translate3d(0, 75%, 0)
+  &__text,
+  &__text-inner
+    @apply flex items-center justify-center w-full h-full
+  

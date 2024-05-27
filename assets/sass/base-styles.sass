@@ -1,0 +1,34 @@
+body
+  --button-border-radius: 50%
+  --button-bg: transparent
+  --button-stroke: #ce1352
+  --button-stroke-width: 1px
+  --button-text: #ffffff
+  --button-bg-hover: transparent
+  --button-stroke-hover: #ce1352
+  --button-stroke-width-hover: 1px
+  --button-text-hover: #ffffff
+  --cursor-stroke: #fff
+  --cursor-fill: #fff
+  --cursor-stroke-width: 1px
+  --color-text: #ffffff
+  --color-bg: #312b35
+  --color-link: #89639e
+  --color-link-hover: #ce1352
+  --button-filler: #ce1352
+
+.font-outline
+  -webkit-text-stroke-width: 1px
+  -webkit-text-stroke-color: #F2F2F2
+
+.cursor
+  display: none
+
+@media (any-pointer: fine)
+  .cursor
+    @apply fixed top-0 left-0 block pointer-events-none
+
+    &__inner
+      fill: var(--cursor-fill)
+      stroke: var(--cursor-stroke)
+      stroke-width: var(--cursor-stroke-width)

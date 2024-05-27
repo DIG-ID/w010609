@@ -6,8 +6,8 @@ function w010609_lp_theme_setup() {
 
 	register_nav_menus(
 		array(
-			'main-menu'        => __( 'Main Menu', 'w010609-lp' ),
-			'menu-footer'      => __( 'Menu Footer', 'w010609-lp' ),
+			'main-menu'   => __( 'Main Menu', 'w010609-lp' ),
+			'menu-footer' => __( 'Menu Footer', 'w010609-lp' ),
 		)
 	);
 
@@ -58,7 +58,87 @@ function w010609_lp_theme_footer_widgets_init() {
 
 add_action( 'widgets_init', 'w010609_lp_theme_footer_widgets_init' );
 
+if ( ! function_exists( 'w010609_lp_theme_get_font_face_styles' ) ) :
 
+	/**
+	 * Get font face styles.
+	 * Called by functions dig_theme_enqueue_styles() and twentytwentytwo_editor_styles() above.
+	 */
+	function w010609_lp_theme_get_font_face_styles() {
+
+		return "
+		@font-face {
+			font-family: 'PP Monument Extended';
+			src: url('" . get_theme_file_uri( 'assets/fonts/PP Monument Extended/PPMonumentExtended-Light.woff2' ) . "') format('woff2'),
+				url('" . get_theme_file_uri( 'assets/fonts/PP Monument Extended/PPMonumentExtended-Light.woff' ) . "') format('woff'),
+				url('" . get_theme_file_uri( 'assets/fonts/PP Monument Extended/PPMonumentExtended-Light.ttf' ) . "') format('truetype');
+			font-weight: 200;
+			font-style: normal;
+			font-display: swap;
+		}
+		
+		@font-face {
+				font-family: 'PP Monument Extended';
+				src: url('" . get_theme_file_uri( 'assets/fonts/PP Monument Extended/PPMonumentExtended-Regular.woff2' ) . "') format('woff2'),
+					url('" . get_theme_file_uri( 'assets/fonts/PP Monument Extended/PPMonumentExtended-Regular.woff' ) . "') format('woff'),
+					url('" . get_theme_file_uri( 'assets/fonts/PP Monument Extended/PPMonumentExtended-Regular.ttf' ) . "') format('truetype');
+				font-weight: normal;
+				font-style: normal;
+				font-display: swap;
+		}
+		
+		@font-face {
+				font-family: 'PP Monument Extended';
+				src: url('" . get_theme_file_uri( 'assets/fonts/PP Monument Extended/PPMonumentExtended-Black.woff2' ) . "') format('woff2'),
+					url('" . get_theme_file_uri( 'assets/fonts/PP Monument Extended/PPMonumentExtended-Black.woff' ) . "') format('woff'),
+					url('" . get_theme_file_uri( 'assets/fonts/PP Monument Extended/PPMonumentExtended-Black.ttf' ) . "') format('truetype');
+				font-weight: 800;
+				font-style: normal;
+				font-display: swap;
+		}
+		@font-face {
+			font-family: 'PP Neue Machina Inktrap';
+			src: url('" . get_theme_file_uri( 'assets/fonts/PP Neue Machina/PPNeueMachina-InktrapRegular.woff2' ) . "') format('woff2'),
+					url('" . get_theme_file_uri( 'assets/fonts/PP Neue Machina/PPNeueMachina-InktrapRegular.woff' ) . "') format('woff'),
+					url('" . get_theme_file_uri( 'assets/fonts/PP Neue Machina/PPNeueMachina-InktrapRegular.ttf' ) . "') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+			font-display: swap;
+	}
+	
+	@font-face {
+			font-family: 'PP Neue Machina Inktrap';
+			src: url('" . get_theme_file_uri( 'assets/fonts/PP Neue Machina/PPNeueMachina-InktrapRegularItalic.woff2' ) . "') format('woff2'),
+					url('" . get_theme_file_uri( 'assets/fonts/PP Neue Machina/PPNeueMachina-InktrapRegularItalic.woff' ) . "') format('woff'),
+					url('" . get_theme_file_uri( 'assets/fonts/PP Neue Machina/PPNeueMachina-InktrapRegularItalic.ttf' ) . "') format('truetype');
+			font-weight: normal;
+			font-style: italic;
+			font-display: swap;
+	}
+		";
+
+	}
+
+endif;
+
+if ( ! function_exists( 'w010609_lp_theme_preload_webfonts' ) ) :
+
+	/**
+	 * Preloads the main web font to improve performance.
+	 */
+	function w010609_lp_theme_preload_webfonts() {
+		?>
+		<link rel="preload" href="<?php echo esc_url( get_theme_file_uri( 'assets/fonts/PP Monument Extended/PPMonumentExtended-Light.woff2' ) ); ?>" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="<?php echo esc_url( get_theme_file_uri( 'assets/fonts/PP Monument Extended/PPMonumentExtended-Regular.woff2' ) ); ?>" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="<?php echo esc_url( get_theme_file_uri( 'assets/fonts/PP Monument Extended/PPMonumentExtended-Black.woff2' ) ); ?>" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="<?php echo esc_url( get_theme_file_uri( 'assets/fonts/PP Neue Machina/PPNeueMachina-InktrapRegular.woff2' ) ); ?>" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="<?php echo esc_url( get_theme_file_uri( 'assets/fonts/PP Neue Machina/PPNeueMachina-InktrapRegularItalic.woff2' ) ); ?>" as="font" type="font/woff2" crossorigin>
+		<?php
+	}
+
+endif;
+
+add_action( 'wp_head', 'w010609_lp_theme_preload_webfonts' );
 
 
 /**
@@ -72,13 +152,17 @@ function w010609_lp_theme_enqueue_styles() {
 
 	// Register Theme main style.
 	wp_register_style( 'theme-styles', get_template_directory_uri() . '/dist/css/main.css', array(), $theme_version );
+
+	// Add styles inline.
+	wp_add_inline_style( 'theme-styles', w010609_lp_theme_get_font_face_styles() );
+
 	// Enqueue theme stylesheet.
 	wp_enqueue_style( 'theme-styles' );
-	wp_enqueue_style( 'theme-fonts', 'https://use.typekit.net/evg0ous.css', array(), $theme_version );
 
+	// Enqueue theme scripts.
 	//Wwp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'theme-scripts', get_stylesheet_directory_uri() . '/dist/js/main.js', array( 'jquery' ), $theme_version, false );
-	
+
 }
 
 add_action( 'wp_enqueue_scripts', 'w010609_lp_theme_enqueue_styles' );
