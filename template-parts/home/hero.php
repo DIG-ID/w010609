@@ -13,7 +13,7 @@
 			<p class="flex justify-between"><span>0</span><span>6</span></p>
 			<p class="flex justify-between"><span>0</span><span>9</span></p>
 		</div>
-		<div class="btn-cta-wrapper fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30">
+		<div class="btn-cta-wrapper fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40">
 			<a href="" class="btn-cta">
 				<div class="btn-cta__deco">
 					<div class="btn-cta__deco-filler"></div>
