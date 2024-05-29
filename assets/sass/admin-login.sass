@@ -1,37 +1,37 @@
-body
-  @apply bg-white
+body.login
+  @apply bg-dark flex flex-col justify-center items-center w-full h-svh
 
 #login
-  width: 370px
+  @apply max-w-sm w-full p-0
   #login_error
     color: #000
   .message
     color: #000
   h1
     a
-      width: 240px
-      height: 150px
-      background-size: 240px 150px
-      margin-bottom: 0px
+      width: 153px
+      height: 23px
+      background-size: 153px 23px
+      margin-bottom: 30px
       &:focus
         box-shadow: none
 
   form
-    @apply shadow-none p-10 border-white/0 bg-white mt-0
+    @apply shadow-none border-dark bg-dark mt-0 p-4
     label
-      @apply font-transducer uppercase text-xs mb-2 tracking-wide
+      @apply font-neueMachina uppercase text-xs text-light mb-2
     input#user_pass,
     input#user_login
-      @apply rounded-none w-full
+      @apply rounded-md w-full py-3 px-3 font-neueMachina text-dark text-base outline-none border-none
       &:focus-visible
-        @apply outline-blue
+        @apply outline-red
     input[type="submit"]
-      @apply inline-block font-transducer font-normal text-sm leading-[18px] tracking-[0.08em] border border-blue text-blue uppercase py-[10px] px-[22px] transition-all duration-300 ease-in-out hover:bg-blue hover:text-white bg-white rounded-none
+      @apply inline-block font-monumentExtend font-bold text-sm text-red border border-red uppercase py-3 px-6 transition-all duration-300 ease-in-out hover:bg-red hover:text-dark bg-transparent rounded-3xl
 
   #backtoblog, #nav
-    @apply font-transducer text-center
+    @apply font-neueMachina text-center
     a
-       @apply font-transducer 
+       @apply font-neueMachina text-gray-400
 
   input:-webkit-autofill
     -webkit-box-shadow: 0 0 0 30px white inset
@@ -40,6 +40,6 @@ body
 .wpml-login-ls
   form#wpml-login-ls-form
     select#wpml-language-switcher-locales
-      @apply rounded-none border border-solid uppercase text-xs font-transducer transition-all duration-300 ease-in hover:bg-white
+      @apply rounded-none border border-solid uppercase text-xs font-neueMachina transition-all duration-300 ease-in hover:bg-white
     input.button
-      @apply rounded-none border border-solid uppercase text-xs font-transducer px-4 py-1 transition-all duration-300 ease-in hover:bg-white
+      @apply rounded-none border border-solid uppercase text-xs font-neueMachina px-4 py-1 transition-all duration-300 ease-in hover:bg-white

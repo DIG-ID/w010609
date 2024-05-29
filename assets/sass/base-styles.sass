@@ -1,3 +1,6 @@
+:root
+  font-size: 12px
+
 body
   --button-border-radius: 50%
   --button-bg: transparent
@@ -17,18 +20,38 @@ body
   --color-link-hover: #ce1352
   --button-filler: #ce1352
 
-.font-outline
-  -webkit-text-stroke-width: 1px
-  -webkit-text-stroke-color: #F2F2F2
+.active
+  cursor: pointer
 
 .cursor
   display: none
 
+.font-outline
+  -webkit-text-stroke-width: 1px
+  -webkit-text-stroke-color: #F2F2F2
+
+.prevent-select
+  -webkit-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+
 @media (any-pointer: fine)
   .cursor
     @apply fixed top-0 left-0 block pointer-events-none
-
     &__inner
       fill: var(--cursor-fill)
       stroke: var(--cursor-stroke)
       stroke-width: var(--cursor-stroke-width)
+
+
+    
+  
+
+.triangles
+  @apply inline-block mx-auto
+  span
+    @apply border-t-[16px] border-r-[18px] border-b-[18px] border-l-[18px] border-t-red border-l-transparent border-r-transparent border-b-transparent block bg-transparent w-0 h-0 -mb-[10px] animate-bounce
+    animation-duration: 1.4s
+    //transform-origin: center center
+    //animation: 800ms ease-in-out 1000ms infinite alternate both running showup

@@ -161,7 +161,7 @@ function w010609_lp_theme_enqueue_styles() {
 
 	// Enqueue theme scripts.
 	//Wwp_enqueue_script( 'jquery' );
-	wp_enqueue_script( 'theme-scripts', get_stylesheet_directory_uri() . '/dist/js/main.js', array( 'jquery' ), $theme_version, false );
+	wp_enqueue_script( 'theme-scripts', get_stylesheet_directory_uri() . '/dist/js/main.js', array( 'jquery' ), $theme_version, true );
 
 }
 

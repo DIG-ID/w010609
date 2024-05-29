@@ -12,7 +12,7 @@ mix
 
   .js('assets/js/main.js', 'js')
   .sass('assets/sass/main.sass', 'css')
-  //.sass('assets/sass/admin-login.sass', 'css')
+  .sass('assets/sass/admin-login.sass', 'css')
   .options({
     postCss: [ tailwindcss('./tailwind.config.js') ],
   })
