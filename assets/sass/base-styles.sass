@@ -14,8 +14,28 @@
   user-select: none
 
 
-.triangles
+.triangle
   @apply inline-block mx-auto
   span
     @apply border-t-[12px] border-r-[14px] border-b-[14px] border-l-[14px] xl:border-t-[16px] xl:border-r-[18px] xl:border-b-[18px] xl:border-l-[18px] border-t-red border-l-transparent border-r-transparent border-b-transparent block bg-transparent w-0 h-0 -mb-[10px] animate-bounce
     animation-duration: 1.4s
+
+
+// Typography
+.fixed-assets
+  &__text-top
+    @apply font-monumentExtend font-light text-[8px] xl:text-base text-light uppercase
+  &__numbers
+    @apply font-neueMachina text-[8px] xl:text-lg text-light tracking-[1.62px] fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-svh py-14 xl:py-32 px-2 xl:px-12 flex flex-col justify-around prevent-select z-20 xl:z-10 invisible
+
+.text-brandname-wrapper
+  .icons
+    @apply mb-12 xl:mb-24 invisible max-w-[56px] xl:max-w-[95px]
+  .brandname
+    @apply font-neueMachina font-normal font-outline text-[61px] xl:text-[200px] text-transparent tracking-[5.585px] xl:tracking-[18px] uppercase stroke-light text-center leading-none invisible whitespace-nowrap
+
+
+.available-text
+  @apply font-neueMachina uppercase text-[41px] xl:text-[200px] text-light text-center leading-none invisible
+  &--02
+    @apply z-30

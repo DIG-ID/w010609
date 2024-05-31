@@ -28,32 +28,32 @@ gsap.registerPlugin(ScrollTrigger);
 
 let mm = gsap.matchMedia();
 
+// Initial animation timeline when we enter the website.
 function initial_timeline() {
-  // initial timeline for animations when we enter the website
+
   var hero_tl = gsap.timeline({
-    // repeat: 10,
-    //repeatDelay: 0.1
     defaults: {
       opacity: 0,
       autoAlpha: 0
     }
   });
-  hero_tl.from("#header-main", { y: -100,  duration: 1, ease: "power4.inOut"});
-  hero_tl.from(".section-hero .fixed-assets__numbers", {  scale: 2, duration: 2, ease: "power4.inOut" }, '<' );
-  hero_tl.from(".section-hero .fixed-assets__left", { y: 10, duration: 1 }, 0.4);
-  hero_tl.from(".section-hero .fixed-assets__right", { y: 20, duration: 1}, 0.6);
-  hero_tl.from(".section-hero .hero-image", { y: 100, duration: 1 }, 0.7);
-  hero_tl.from(".section-hero .text-brandname-wrapper .icons", { duration: 1 }, 0.8);
-  hero_tl.from(".section-hero .brandname", { y: -80, duration: 1 }, 0.9);
-  //hero_tl.from(".btn-cta", { y: 80, opacity: 0, autoAlpha: 1, duration: 1 }, 0.9);
-  hero_tl.from(".section-hero .available-text-01", { x: 80, duration: 1 }, 0.9);
-  hero_tl.from(".section-hero .available-text-02", { x: -80, duration: 1}, 0.9);
-  hero_tl.from(".section-hero .triangles", { duration: 1 }, 0.9);
-  hero_tl.from(".section-hero .btn-cta-wrapper", { duration: 1, scale: 2, ease: "power4.inOut" }, 1)
+  hero_tl.from("#header-main", { y: -100, duration: 0.6})
+    
+    .from(".section-hero .fixed-assets__text--left", { x: -40, duration: 0.8 }, '<')
+    .from(".section-hero .fixed-assets__text--right", { x: 40, duration: 0.8}, '<')
+    .from(".section-hero .fixed-assets__numbers", {  opacity: 0, duration: 1 }, '<' )
+    .from(".section-hero .hero-image", { y: 100, duration: 1 }, 0.4)
+    .from(".section-hero .text-brandname-wrapper .icons", { duration: 1, opacity: 0 }, 0.8)
+    .from(".section-hero .brandname", { y: -80, duration: 1 }, 0.9)
+    .from(".section-hero .available-text--01", { x: 80, duration: 1 }, 0.9)
+    .from(".section-hero .available-text--02", { x: -80, duration: 1}, 0.9)
+    .from(".section-hero .triangle", { duration: 2, opacity: 0 }, 0.9)
+    .from(".section-hero .btn-cta-wrapper", { duration: 1, scale: 2, ease: "power4.inOut" }, 1);
 }
 
 window.addEventListener('load', function(event){
   initial_timeline();
+  //ScrollTrigger.refresh();
 });
 
 // Animate the hero section
@@ -62,17 +62,18 @@ var hero_onScroll_tl = gsap.timeline({
   scrollTrigger: {
     trigger: '.section-hero',
     scrub: 1,
-    start: 'center 48%',
-    end: 'bottom center',
+    start: 'center center',
+    end: 'bottom top',
+    toggleActions: 'play none none reset',
     //markers: true
   }, // start animation when ".box" enters the viewport
  });
 
-hero_onScroll_tl.to('.section-hero .hero-image', {y: -200, duration: 2});
-hero_onScroll_tl.to('.section-hero .brandname', {y: -200, opacity: 0, autoAlpha: 1, duration: 1}, '<');
-hero_onScroll_tl.to('.section-hero .available-text-01', {x: -200, opacity: 0, autoAlpha: 1, duration: 2}, '<');
-hero_onScroll_tl.to('.section-hero .available-text-02', {x: 200, opacity: 0, autoAlpha: 1, duration: 2}, '<');
-hero_onScroll_tl.to(".section-hero .triangles", { y: 40, opacity: 0, duration: 2 }, 1);
+hero_onScroll_tl.to('.section-hero .hero-image', {y: -200, opacity: 0.5, duration: 2});
+hero_onScroll_tl.to('.section-hero .brandname', {y: -200, opacity: 0, duration: 1}, '<');
+hero_onScroll_tl.to('.section-hero .available-text--01', {x: -200, opacity: 0, duration: 2}, '<');
+hero_onScroll_tl.to('.section-hero .available-text--02', {x: 200, opacity: 0, duration: 2}, '<');
+hero_onScroll_tl.to(".section-hero .triangle", { y: 40, opacity: 0, duration: 2 }, 1);
 
 // Animate images on the middle section
 gsap.from('.image-03', {
@@ -114,29 +115,18 @@ mm.add("(min-width: 1280px)", () => {
     scrollTrigger: {
       trigger: '.section-footer',
       scrub: 1,
-      start: '-200px 40%',
+      start: '20% bottom',
       end: 'bottom bottom',
-      //markers: true
-    }, // start animation when ".box" enters the viewport
+      toggleActions: 'play none none reset',
+      markers: true,
+    },
    });
   
-  footer_tl.from('.section-footer .image-04', {y: -200, opacity: 0, autoAlpha:0, duration: 2});
-  footer_tl.from(".section-footer .text-brandname-wrapper .icons", { opacity: 0, duration: 1 }, '<');
-  footer_tl.from('.section-footer .brandname', {y: -200, opacity: 0, autoAlpha: 0, duration: 1}, '<');
-  footer_tl.from('.section-footer .available-text-01', {x: -200, opacity: 0, autoAlpha: 1, duration: 2}, '<');
-  footer_tl.from('.section-footer .available-text-02', {x: 200, opacity: 0, autoAlpha: 1, duration: 2}, '<');
-  footer_tl.from(".section-footer .triangles", { y: 40, opacity: 0, duration: 2 }, 1);
+  footer_tl.from('.section-footer .image-04', {y: -200, opacity: 0, autoAlpha: 0, duration: 2});
+  footer_tl.from(".section-footer .text-brandname-wrapper .icons", { opacity: 0, autoAlpha: 0, duration: 1 });
+  footer_tl.from('.section-footer .brandname', {y: -200, opacity: 0, autoAlpha: 0, duration: 2});
+  footer_tl.from('.section-footer .available-text--01', {x: -200, opacity: 0, autoAlpha: 0, duration: 3});
+  footer_tl.from('.section-footer .available-text--02', {x: 200, opacity: 0, autoAlpha: 0, duration: 3});
+  footer_tl.from(".section-footer .triangle", { y: 40, opacity: 0, autoAlpha: 0, duration: 2 });
 
 });
-
-
-
-/*import Cursor from './cursor';
-import ButtonCtrl from './button';
-
-// initialize custom cursor
-const cursor = new Cursor(document.querySelector('.cursor'));
-const button = new ButtonCtrl(document.querySelector('.btn-cta'));
-
-button.on('enter', () => cursor.enter());
-button.on('leave', () => cursor.leave());*/
