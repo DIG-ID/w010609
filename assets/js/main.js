@@ -27,23 +27,33 @@ gsap.ticker.lagSmoothing(0)
 gsap.registerPlugin(ScrollTrigger);
 
 
-// initial timeline for animations when we enter the website
-var hero_tl = gsap.timeline({
- // repeat: 10,
-  //repeatDelay: 0.1
-});
-hero_tl.from("#header-main", { y: -100, opacity: 0, autoAlpha: 0, duration: 1, ease: "power4.inOut"});
-hero_tl.from(".section-hero .fixed-assets__numbers", { opacity: 0, scale: 2, duration: 2, ease: "power4.inOut" }, '<' );
-hero_tl.from(".section-hero .fixed-assets__left", { y: 10, opacity: 0, duration: 1 }, 0.4);
-hero_tl.from(".section-hero .fixed-assets__right", { y: 20, opacity: 0, duration: 1}, 0.6);
-hero_tl.from(".section-hero .hero-image", { y: 100, opacity: 0, duration: 1 }, 0.7);
-hero_tl.from(".section-hero .text-brandname-wrapper .icons", { opacity: 0, duration: 1 }, 0.8);
-hero_tl.from(".section-hero .brandname", { y: -80, opacity: 0, duration: 1 }, 0.9);
-//hero_tl.from(".btn-cta", { y: 80, opacity: 0, autoAlpha: 1, duration: 1 }, 0.9);
-hero_tl.from(".section-hero .available-text-01", { x: 80, opacity: 0, duration: 1 }, 0.9);
-hero_tl.from(".section-hero .available-text-02", { x: -80, opacity: 0, duration: 1}, 0.9);
-hero_tl.from(".section-hero .triangles", { opacity: 0, duration: 1 }, 0.9);
+function initial_timeline() {
+  // initial timeline for animations when we enter the website
+  var hero_tl = gsap.timeline({
+    // repeat: 10,
+    //repeatDelay: 0.1
+    defaults: {
+      opacity: 0,
+      autoAlpha: 0
+    }
+  });
+  hero_tl.from("#header-main", { y: -100,  duration: 1, ease: "power4.inOut"});
+  hero_tl.from(".section-hero .fixed-assets__numbers", {  scale: 2, duration: 2, ease: "power4.inOut" }, '<' );
+  hero_tl.from(".section-hero .fixed-assets__left", { y: 10, duration: 1 }, 0.4);
+  hero_tl.from(".section-hero .fixed-assets__right", { y: 20, duration: 1}, 0.6);
+  hero_tl.from(".section-hero .hero-image", { y: 100, duration: 1 }, 0.7);
+  hero_tl.from(".section-hero .text-brandname-wrapper .icons", { duration: 1 }, 0.8);
+  hero_tl.from(".section-hero .brandname", { y: -80, duration: 1 }, 0.9);
+  //hero_tl.from(".btn-cta", { y: 80, opacity: 0, autoAlpha: 1, duration: 1 }, 0.9);
+  hero_tl.from(".section-hero .available-text-01", { x: 80, duration: 1 }, 0.9);
+  hero_tl.from(".section-hero .available-text-02", { x: -80, duration: 1}, 0.9);
+  hero_tl.from(".section-hero .triangles", { duration: 1 }, 0.9);
+  hero_tl.from(".section-hero .btn-cta-wrapper", { duration: 1, scale: 2, ease: "power4.inOut" }, 1)
+}
 
+window.addEventListener('load', function(event){
+  initial_timeline();
+});
 
 // Animate the hero section
 
