@@ -42,7 +42,7 @@
 			?>
 		</div>
 		<div class="flex flex-col items-center mt-20 xl:mt-36 z-20 text-brandname-wrapper">
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95 20" fill="none" class="icons mb-6 cl:mb-24 invisible max-w-[56px] xl:max-w-[95px]">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95 20" fill="none" class="icons mb-10 xl:mb-24 invisible max-w-[56px] xl:max-w-[95px]">
 				<g clip-path="url(#clip0_2018_36)">
 					<path d="M44 19.45V12.66H37.46V6.45H44V0H50.14V6.45H56.67V12.66H50.14V19.45H44Z" fill="#EC302E"/>
 					<path d="M81.4499 19.45V12.66H74.9099V6.45H81.4499V0H87.5999V6.45H94.1299V12.66H87.5999V19.45H81.4499Z" fill="#EC302E"/>
