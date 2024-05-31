@@ -65,15 +65,19 @@ var hero_onScroll_tl = gsap.timeline({
     start: 'center center',
     end: 'bottom top',
     toggleActions: 'play none none reset',
+    defaults: {
+      opacity: 0,
+      autoAlpha: 0
+    }
     //markers: true
   }, // start animation when ".box" enters the viewport
  });
 
 hero_onScroll_tl.to('.section-hero .hero-image', {y: -200, opacity: 0.5, duration: 2});
-hero_onScroll_tl.to('.section-hero .brandname', {y: -200, opacity: 0, duration: 1}, '<');
-hero_onScroll_tl.to('.section-hero .available-text--01', {x: -200, opacity: 0, duration: 2}, '<');
-hero_onScroll_tl.to('.section-hero .available-text--02', {x: 200, opacity: 0, duration: 2}, '<');
-hero_onScroll_tl.to(".section-hero .triangle", { y: 40, opacity: 0, duration: 2 }, 1);
+hero_onScroll_tl.to('.section-hero .brandname', {y: -200, duration: 1}, '<');
+hero_onScroll_tl.to('.section-hero .available-text--01', {x: -200, duration: 2}, '<');
+hero_onScroll_tl.to('.section-hero .available-text--02', {x: 200, duration: 2}, '<');
+hero_onScroll_tl.to(".section-hero .triangle", { y: 40, duration: 2 }, 1);
 
 // Animate images on the middle section
 gsap.from('.image-03', {
