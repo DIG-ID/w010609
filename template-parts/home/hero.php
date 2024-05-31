@@ -1,4 +1,4 @@
-<section class="section-hero h-svh overflow-hidden">
+<section class="section-hero h-svh overflow-hidden transition-all duration-200 ease-in-out">
 	<div class="fixed-assets">
 		<div class="fixed-assets__text flex w-full justify-between items-start mx-auto px-4 xl:px-16 fixed left-0 top-2 xl:top-20 prevent-select z-20 xl:z-10">
 			<div class="fixed-assets__left invisible">
@@ -34,7 +34,7 @@
 			$image_01 = get_field( 'image_01', 'options' );
 			if ( $image_01 ) :
 				?>
-				<figure class="">
+				<figure>
 					<?php echo wp_get_attachment_image( $image_01, 'full', false, array( 'class' => 'w-full max-w-full object-cover h-[80%] xl:h-auto' ) ); ?>
 				</figure>
 				<?php

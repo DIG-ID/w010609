@@ -26,6 +26,7 @@ gsap.ticker.lagSmoothing(0)
 
 gsap.registerPlugin(ScrollTrigger);
 
+let mm = gsap.matchMedia();
 
 function initial_timeline() {
   // initial timeline for animations when we enter the website
@@ -105,22 +106,30 @@ gsap.from('.image-02', {
 
 
 // Animate the footer section
-var footer_tl = gsap.timeline({
-  scrollTrigger: {
-    trigger: '.section-footer',
-    scrub: 1,
-    start: '-200px 40%',
-    end: 'bottom bottom',
-    markers: true
-  }, // start animation when ".box" enters the viewport
- });
 
-footer_tl.from('.section-footer .image-04', {y: -200, opacity: 0, autoAlpha:0, duration: 2});
-footer_tl.from(".section-footer .text-brandname-wrapper .icons", { opacity: 0, duration: 1 }, '<');
-footer_tl.from('.section-footer .brandname', {y: -200, opacity: 0, autoAlpha: 0, duration: 1}, '<');
-footer_tl.from('.section-footer .available-text-01', {x: -200, opacity: 0, autoAlpha: 1, duration: 2}, '<');
-footer_tl.from('.section-footer .available-text-02', {x: 200, opacity: 0, autoAlpha: 1, duration: 2}, '<');
-footer_tl.from(".section-footer .triangles", { y: 40, opacity: 0, duration: 2 }, 1);
+
+mm.add("(min-width: 1280px)", () => {
+
+  var footer_tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.section-footer',
+      scrub: 1,
+      start: '-200px 40%',
+      end: 'bottom bottom',
+      //markers: true
+    }, // start animation when ".box" enters the viewport
+   });
+  
+  footer_tl.from('.section-footer .image-04', {y: -200, opacity: 0, autoAlpha:0, duration: 2});
+  footer_tl.from(".section-footer .text-brandname-wrapper .icons", { opacity: 0, duration: 1 }, '<');
+  footer_tl.from('.section-footer .brandname', {y: -200, opacity: 0, autoAlpha: 0, duration: 1}, '<');
+  footer_tl.from('.section-footer .available-text-01', {x: -200, opacity: 0, autoAlpha: 1, duration: 2}, '<');
+  footer_tl.from('.section-footer .available-text-02', {x: 200, opacity: 0, autoAlpha: 1, duration: 2}, '<');
+  footer_tl.from(".section-footer .triangles", { y: 40, opacity: 0, duration: 2 }, 1);
+
+});
+
+
 
 /*import Cursor from './cursor';
 import ButtonCtrl from './button';
