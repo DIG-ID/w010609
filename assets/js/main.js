@@ -38,7 +38,6 @@ function initial_timeline() {
     }
   });
   hero_tl.from("#header-main", { y: -100, duration: 0.6})
-    
     .from(".section-hero .fixed-assets__text--left", { x: -40, duration: 0.8 }, '<')
     .from(".section-hero .fixed-assets__text--right", { x: 40, duration: 0.8}, '<')
     .from(".section-hero .fixed-assets__numbers", {  opacity: 0, duration: 1 }, '<' )
@@ -73,11 +72,11 @@ var hero_onScroll_tl = gsap.timeline({
   }, // start animation when ".box" enters the viewport
  });
 
-hero_onScroll_tl.to('.section-hero .hero-image', {y: -200, opacity: 0.5, duration: 2});
-hero_onScroll_tl.to('.section-hero .brandname', {y: -200, duration: 1}, '<');
-hero_onScroll_tl.to('.section-hero .available-text--01', {x: -200, duration: 2}, '<');
-hero_onScroll_tl.to('.section-hero .available-text--02', {x: 200, duration: 2}, '<');
-hero_onScroll_tl.to(".section-hero .triangle", { y: 40, duration: 2 }, 1);
+//hero_onScroll_tl.to('.section-hero .hero-image', {y: -200, opacity: 0.5, duration: 2});
+hero_onScroll_tl.to('.section-hero .brandname', {y: -200, duration: 1})
+  .to('.section-hero .available-text--01', {x: -200, duration: 2}, '<')
+  .to('.section-hero .available-text--02', {x: 200, duration: 2}, '<')
+  .to(".section-hero .triangle", { y: 40, duration: 2 }, 1);
 
 // Animate images on the middle section
 gsap.from('.image-03', {
@@ -119,18 +118,18 @@ mm.add("(min-width: 1280px)", () => {
     scrollTrigger: {
       trigger: '.section-footer',
       scrub: 1,
-      start: '20% bottom',
+      start: 'top 30%',
       end: 'bottom bottom',
       toggleActions: 'play none none reset',
       //markers: true,
     },
    });
   
-  footer_tl.from('.section-footer .image-04', {y: -200, opacity: 0, autoAlpha: 0, duration: 2});
-  footer_tl.from(".section-footer .text-brandname-wrapper .icons", { opacity: 0, autoAlpha: 0, duration: 1 });
-  footer_tl.from('.section-footer .brandname', {y: -200, opacity: 0, autoAlpha: 0, duration: 2});
-  footer_tl.from('.section-footer .available-text--01', {x: -200, opacity: 0, autoAlpha: 0, duration: 3});
-  footer_tl.from('.section-footer .available-text--02', {x: 200, opacity: 0, autoAlpha: 0, duration: 3});
-  footer_tl.from(".section-footer .triangle", { y: 40, opacity: 0, autoAlpha: 0, duration: 2 });
+  footer_tl.from('.section-footer .image-04', {y: 200, opacity: 0, autoAlpha: 0, duration: 2})
+    .from(".text-brandname-wrapper .icons", { opacity: 0, autoAlpha: 0, duration: 1 }, '<')
+    .from('.section-footer .brandname', {y: -200, opacity: 0, autoAlpha: 0, duration: 2}, '<')
+    .from('.section-footer .available-text--01', {x: -200, opacity: 0, autoAlpha: 0, duration: 3}, '<')
+    .from('.section-footer .available-text--02', {x: 200, opacity: 0, autoAlpha: 0, duration: 3}, '<')
+    .from(".section-footer .triangle", { y: 40, opacity: 0, autoAlpha: 0, duration: 1 }, 1);
 
 });
