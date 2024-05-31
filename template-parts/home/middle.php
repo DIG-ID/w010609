@@ -1,10 +1,10 @@
-<section class="section-middle ">
+<section class="section-middle py-16">
 	<div class="flex justify-center items-start gap-x-44">
 		<?php
 		$image_02 = get_field( 'image_02', 'options' );
 		if ( $image_02 ) :
 			?>
-			<figure class="image-02 flex flex-col mt-[40%]">
+			<figure class="image-02 flex flex-col mt-[30%]">
 				<figcaption class="mb-4"><p class="font-monumentExtend font-light text-base text-light uppercase"><span class="font-bold">w010609</span><br>available now</p></figcaption>
 				<?php echo wp_get_attachment_image( $image_02, 'full', false, array( 'class' => 'w-full max-w-full object-cover h-auto' ) ); ?>
 			</figure>

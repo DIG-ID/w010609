@@ -13,18 +13,20 @@
 			<p class="flex justify-between"><span>0</span><span>6</span></p>
 			<p class="flex justify-between"><span>0</span><span>9</span></p>
 		</div>
-		<div class="btn-cta-wrapper fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40">
+		<div class="btn-cta-wrapper fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50">
 			<a href="" class="btn-cta">
-				<div class="btn-cta__deco">
-					<div class="btn-cta__deco-filler"></div>
-				</div>
-				<span class="btn-cta__text">
-					<span class="btn-cta__text-inner"><?php esc_html_e( 'See the collection', 'w010609-lp' ); ?></span>
+				<span class="btn-cta__ripple"><span></span></span>
+				<span class="btn-cta__title">
+					<span class="btn-cta__title-in">
+						<?php esc_html_e( 'See the collection', 'w010609-lp' ); ?>
+						<span class="btn-cta__title-sec">
+							<?php esc_html_e( 'visit the shop', 'w010609-lp' ); ?>
+						</span>
+					</span>
 				</span>
 			</a>
 		</div>
-
-	</div>
+	</div><!-- fixed assets -->
 
 	<div class="content flex flex-col justify-between items-center w-full h-svh">
 		<div class="hero-image absolute left-02 top-24 w-full h-full flex justify-center z-10">
@@ -33,7 +35,7 @@
 			if ( $image_01 ) :
 				?>
 				<figure>
-					<?php echo wp_get_attachment_image( $image_01, 'full' ); ?>
+					<?php echo wp_get_attachment_image( $image_01, 'full', false, array( 'class' => 'w-full max-w-full object-cover h-auto' ) ); ?>
 				</figure>
 				<?php
 			endif;
@@ -58,7 +60,7 @@
 		<div class="flex flex-col justify-center items-center available-text-wrapper">
 			<p class="available-text-01 font-neueMachina uppercase text-[200px] text-light text-center leading-none"><?php esc_html_e( 'available', 'w010609-lp' ); ?> <span class="italic"><?php esc_html_e( 'now', 'w010609-lp' ); ?></span></p>
 			<p class="available-text-02 font-neueMachina uppercase text-[200px] text-light text-center leading-none z-30"><span class="italic"><?php esc_html_e( 'available', 'w010609-lp' ); ?></span> <?php esc_html_e( 'now', 'w010609-lp' ); ?></p>
-			<div class="triangles">
+			<div class="triangles z-20">
 				<span ></span>
 			</div>
 		</div>
