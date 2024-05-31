@@ -117,7 +117,7 @@ var footer_tl = gsap.timeline({
 
 footer_tl.from('.section-footer .image-04', {y: -200, opacity: 0, autoAlpha:0, duration: 2});
 footer_tl.from(".section-footer .text-brandname-wrapper .icons", { opacity: 0, duration: 1 }, '<');
-footer_tl.from('.section-footer .brandname', {y: -200, opacity: 0, autoAlpha: 1, duration: 1}, '<');
+footer_tl.from('.section-footer .brandname', {y: -200, opacity: 0, autoAlpha: 0, duration: 1}, '<');
 footer_tl.from('.section-footer .available-text-01', {x: -200, opacity: 0, autoAlpha: 1, duration: 2}, '<');
 footer_tl.from('.section-footer .available-text-02', {x: 200, opacity: 0, autoAlpha: 1, duration: 2}, '<');
 footer_tl.from(".section-footer .triangles", { y: 40, opacity: 0, duration: 2 }, 1);
