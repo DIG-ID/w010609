@@ -122,7 +122,7 @@ mm.add("(min-width: 1280px)", () => {
       start: '20% bottom',
       end: 'bottom bottom',
       toggleActions: 'play none none reset',
-      markers: true,
+      //markers: true,
     },
    });
   

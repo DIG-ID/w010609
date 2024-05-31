@@ -13,7 +13,7 @@
 		$image_03 = get_field( 'image_03', 'options' );
 		if ( $image_03 ) :
 			?>
-			<figure class="image-03 flex xl:justify-end items-end order-1 xl:order-2 px-12 xl:px-0">
+			<figure class="image-03 flex xl:justify-end items-end order-1 xl:order-2 px-12 xl:px-0 w-full xl:w-auto">
 				<?php echo wp_get_attachment_image( $image_03, 'full', false, array( 'class' => 'w-full max-w-full object-cover h-auto' ) ); ?>
 				<figcaption class="ml-1 xl:ml-8"><p class="font-neueMachina font-normal text-[8px] xl:text-base text-light uppercase tracking-[0.72px] xl:tracking-[1.44px] leading-[normal]"><span class="text-red font-bold">w</span><br>01<br>06<br>09</p></figcaption>
 			</figure>
