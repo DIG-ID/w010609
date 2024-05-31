@@ -8,12 +8,12 @@
 				<p class="font-monumentExtend font-light text-[8px] xl:text-base text-light uppercase text-end"><span class="font-bold">w010609</span><br> available now</p>
 			</div>
 		</div>
-		<div class="fixed-assets__numbers font-neueMachina text-[8px] xl:text-lg text-light tracking-[1.62px] fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-svh py-14 xl:py-32 px-2 xl:px-12 flex flex-col justify-around prevent-select z-20 xl:z-10 invisible">
+		<div class="fixed-assets__numbers font-neueMachina text-[8px] xl:text-lg text-light tracking-[1.62px] fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-svh py-14 xl:py-32 px-2 xl:px-12 flex flex-col justify-around prevent-select z-20 xl:z-10 invisible transition-all duration-200 ease-in-out">
 			<p class="flex justify-between"><span>0</span><span>1</span></p>
 			<p class="flex justify-between"><span>0</span><span>6</span></p>
 			<p class="flex justify-between"><span>0</span><span>9</span></p>
 		</div>
-		<div class="btn-cta-wrapper fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 invisible">
+		<div class="btn-cta-wrapper fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 invisible transition-all duration-200 ease-in-out">
 			<a href="https://www.isabodywear.ch/kollektionen/spezial/w010609/" target="_blank" class="btn-cta">
 				<span class="btn-cta__ripple"><span></span></span>
 				<span class="btn-cta__title">
