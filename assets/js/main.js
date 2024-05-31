@@ -109,9 +109,9 @@ var footer_tl = gsap.timeline({
   scrollTrigger: {
     trigger: '.section-footer',
     scrub: 1,
-    start: 'top 40%',
+    start: '-200px 40%',
     end: 'bottom bottom',
-    //markers: true
+    markers: true
   }, // start animation when ".box" enters the viewport
  });
 

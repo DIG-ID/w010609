@@ -29,7 +29,7 @@
 	</div><!-- fixed assets -->
 
 	<div class="content flex flex-col justify-between items-center w-full h-svh">
-		<div class="hero-image absolute left-02 top-24 w-full h-full flex justify-center z-10">
+		<div class="hero-image absolute left-02 top-24 w-full h-full flex justify-center z-10 invisible">
 			<?php
 			$image_01 = get_field( 'image_01', 'options' );
 			if ( $image_01 ) :

@@ -1,4 +1,4 @@
-<section class="section-middle py-16">
+<section class="section-middle py-40">
 	<div class="flex justify-center items-start gap-x-44">
 		<?php
 		$image_02 = get_field( 'image_02', 'options' );

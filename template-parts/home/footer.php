@@ -1,4 +1,4 @@
-<section class="section-footer h-full overflow-hidden py-12 relative">
+<section class="section-footer h-svh overflow-hidden relative">
 	<div class="content flex flex-col justify-between items-center w-full h-svh">
 		<div class="image-04 absolute left-02 top-24 w-full h-full flex justify-center z-10">
 			<?php
