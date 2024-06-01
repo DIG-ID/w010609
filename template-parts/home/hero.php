@@ -1,6 +1,6 @@
-<section class="section-hero h-svh overflow-hidden transition-all duration-200 ease-in-out relative">
+<section class="section-hero h-svh overflow-hidden relative">
 	<div class="fixed-assets">
-		<div class="fixed-assets__text-wrapper flex w-full justify-between items-start mx-auto px-4 xl:px-16 fixed left-0 top-2 xl:top-20 prevent-select z-20 xl:z-10">
+		<div class="fixed-assets__text-wrapper flex w-full justify-between items-start mx-auto px-4 xl:px-16 fixed left-0 top-2 xl:top-20 prevent-select z-20">
 			<div class="fixed-assets__text--left invisible">
 				<p class="fixed-assets__text-top"><span class="font-bold">ISA</span><br>bodywear</p>
 			</div>
@@ -41,7 +41,7 @@
 			endif;
 			?>
 		</div>
-		<div class="text-brandname-wrapper flex flex-col items-center mt-20 xl:mt-36 z-20">
+		<div class="text-brandname-wrapper flex flex-col items-center justify-between mt-20 xl:mt-36 z-20">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95 20" fill="none" class="icons z-20">
 				<g clip-path="url(#clip0_2018_36)">
 					<path d="M44 19.45V12.66H37.46V6.45H44V0H50.14V6.45H56.67V12.66H50.14V19.45H44Z" fill="#EC302E"/>

@@ -42,7 +42,7 @@ function initial_timeline() {
     .from(".section-hero .fixed-assets__text--right", { x: 40, duration: 0.8}, '<')
     .from(".section-hero .fixed-assets__numbers", {  opacity: 0, duration: 1 }, '<' )
     .from(".section-hero .hero-image", { y: 100, duration: 1 }, 0.4)
-    .from(".section-hero .text-brandname-wrapper .icons", { duration: 1, opacity: 0 }, 0.8)
+    .from(".section-hero .icons", { duration: 1, opacity: 0 }, 0.8)
     .from(".section-hero .brandname", { y: -80, duration: 1 }, 0.9)
     .from(".section-hero .available-text--01", { x: 80, duration: 1 }, 0.9)
     .from(".section-hero .available-text--02", { x: -80, duration: 1}, 0.9)
@@ -76,7 +76,7 @@ var hero_onScroll_tl = gsap.timeline({
 hero_onScroll_tl.to('.section-hero .brandname', {y: -200, duration: 1})
   .to('.section-hero .available-text--01', {x: -200, duration: 2}, '<')
   .to('.section-hero .available-text--02', {x: 200, duration: 2}, '<')
-  .to(".section-hero .triangle", { y: 40, duration: 2 }, 1);
+  .to('.section-hero .triangle', { y: 40, duration: 2 }, 1);
 
 // Animate images on the middle section
 gsap.from('.image-03', {
@@ -126,10 +126,10 @@ mm.add("(min-width: 1280px)", () => {
    });
   
   footer_tl.from('.section-footer .image-04', {y: 200, opacity: 0, autoAlpha: 0, duration: 2})
-    .from(".text-brandname-wrapper .icons", { opacity: 0, autoAlpha: 0, duration: 1 }, '<')
+    .from('.section-footer  .text-brandname-wrapper .icons', { opacity: 0, autoAlpha: 0, duration: 1 }, '<')
     .from('.section-footer .brandname', {y: -200, opacity: 0, autoAlpha: 0, duration: 2}, '<')
     .from('.section-footer .available-text--01', {x: -200, opacity: 0, autoAlpha: 0, duration: 3}, '<')
     .from('.section-footer .available-text--02', {x: 200, opacity: 0, autoAlpha: 0, duration: 3}, '<')
-    .from(".section-footer .triangle", { y: 40, opacity: 0, autoAlpha: 0, duration: 1 }, 1);
+    .from('.section-footer .triangle', { y: 40, opacity: 0, autoAlpha: 0, duration: 1 }, 1);
 
 });
