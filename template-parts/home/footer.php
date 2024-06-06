@@ -1,4 +1,4 @@
-<section class="section-footer xl:h-svh overflow-hidden relative min-h-[575px] xl:min-h-[auto] mt-48 xl:mt-0">
+<section class="section-footer  h-svh xl:h-svh overflow-hidden relative min-h-[575px] xl:min-h-[auto] mt-48 xl:mt-0">
 	<div class="content flex flex-col justify-between items-center w-full xl:h-svh h-full">
 		<div class="image-04 absolute left-02 top-24 w-full h-full flex justify-center z-10 xl:invisible ">
 			<?php
@@ -6,13 +6,13 @@
 			if ( $image_04 ) :
 				?>
 				<figure class="w-full xl:w-auto">
-					<?php echo wp_get_attachment_image( $image_04, 'full', false, array( 'class' => 'w-full max-w-full object-cover h-full xl:h-auto' ) ); ?>
+					<?php echo wp_get_attachment_image( $image_04, 'full', false, array( 'class' => 'w-full max-w-full object-cover h-auto' ) ); ?>
 				</figure>
 				<?php
 			endif;
 			?>
 		</div>
-		<div class="text-brandname-wrapper hidden invisible xl:flex xl:visible xl:flex-col xl:items-center mt-20 xl:mt-36 z-20 ">
+		<div class="text-brandname-wrapper invisible flex flex-col items-center mt-20 xl:mt-36 z-20 ">
 			<svg xmlns="http://www.w3.org/2000/svg" width="95" height="20" viewBox="0 0 95 20" fill="none" class="icons z-20">
 				<g clip-path="url(#clip0_2018_36)">
 					<path d="M44 19.45V12.66H37.46V6.45H44V0H50.14V6.45H56.67V12.66H50.14V19.45H44Z" fill="#EC302E"/>
@@ -28,7 +28,7 @@
 			<h2 class="brandname"><?php esc_html_e( 'W 01 06 09', 'w010609-lp' ); ?></h2>
 		</div>
 
-		<div class="available-text-wrapper hidden invisible xl:visible xl:flex xl:flex-col xl:justify-center xl:items-center">
+		<div class="available-text-wrapper flex flex-col justify-center items-center">
 			<p class="available-text available-text--01"><?php esc_html_e( 'available', 'w010609-lp' ); ?> <span class="italic"><?php esc_html_e( 'now', 'w010609-lp' ); ?></span></p>
 			<p class="available-text available-text--02"><span class="italic"><?php esc_html_e( 'available', 'w010609-lp' ); ?></span> <?php esc_html_e( 'now', 'w010609-lp' ); ?></p>
 			<div class="triangles z-20 rotate-180">
