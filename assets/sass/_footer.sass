@@ -1,0 +1,14 @@
+#main-footer
+  #menu-footer
+    @apply flex
+    .menu-item
+      @apply relative
+      &::after
+        content: '●'
+        @apply inline-block px-2
+      &:last-child
+        &::after
+          @apply hidden
+      a
+        @apply font-neueMachina font-normal text-sm text-dark leading-9 tracking-[1.4px] uppercase
+        font-feature-settings: 'dlig' on
