@@ -115,7 +115,17 @@ if ( ! function_exists( 'w010609_lp_theme_get_font_face_styles' ) ) :
 			font-style: italic;
 			font-display: swap;
 	}
-		";
+
+	@font-face {
+		font-family: 'PP Neue Machina Inktrap';
+		src: url('" . get_theme_file_uri( 'assets/fonts/PP Neue Machina/PPNeueMachina-InktrapUltrabold.woff2' ) . "') format('woff2'),
+				url('" . get_theme_file_uri( 'assets/fonts/PP Neue Machina/PPNeueMachina-InktrapUltrabold.woff' ) . "') format('woff'),
+				url('" . get_theme_file_uri( 'assets/fonts/PP Neue Machina/PPNeueMachina-InktrapUltrabold.ttf' ) . "') format('truetype');
+		font-weight: 800;
+		font-style: normal;
+		font-display: swap;
+	}
+	";
 
 	}
 

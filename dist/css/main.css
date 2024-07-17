@@ -556,9 +556,6 @@ video {
 .justify-between{
   justify-content: space-between;
 }
-.border-l{
-  border-left-width: 1px;
-}
 .border-l-2{
   border-left-width: 2px;
 }
@@ -610,11 +607,11 @@ video {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
-.pt-16{
-  padding-top: 4rem;
-}
 .pb-36{
   padding-bottom: 9rem;
+}
+.pt-16{
+  padding-top: 4rem;
 }
 .font-monumentExtend{
   font-family: PP Monument Extended, sans-serif;
@@ -729,12 +726,27 @@ html.lenis {
 }
 
 .btn{
+  display: inline-block;
+  white-space: pre-wrap;
+  word-break: break-all;
   font-family: PP Neue Machina Inktrap, sans-serif;
   font-size: 70px;
   font-weight: 800;
   text-transform: uppercase;
   line-height: 70px;
   letter-spacing: -1.4px;
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn h2{
+  display: inline-block;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+.btn::after {
+  content: ">>";
+  display: inline-block;
 }
 
 .hero{
