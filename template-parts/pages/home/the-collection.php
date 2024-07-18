@@ -4,7 +4,7 @@
 			<div class="w-2/3 px-14 py-16">
 				<div class=" flex flex-col h-full justify-between">
 					<div>
-						<h2 class="btn--vertical text-dark"><?php the_field( 'the_collection_title' ); ?><span class="btn--arrow"></span></h2>
+						<h2 class="btn--vertical text-dark"><?php the_field( 'the_collection_title' ); ?></h2>
 					</div>
 					
 					<p class="text-description text-dark max-w-md mb-8 self-end"><?php the_field( 'the_collection_description' ); ?></p>

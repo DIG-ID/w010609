@@ -15,7 +15,7 @@
 				</div>
 			</div>
 			<div class="w-2/3 bg-red text-light px-14 py-16">
-				<h2 class="btn--vertical text-dark"><?php the_field( 'the_story_title' ); ?><span class="btn--arrow"></span></h2>
+				<h2 class="btn--vertical text-dark"><?php the_field( 'the_story_title' ); ?></h2>
 				<p class="text-description text-dark max-w-xl translate-x-full"><?php the_field( 'the_story_description' ); ?></p>
 			</div>
 		</div>

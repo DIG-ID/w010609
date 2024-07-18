@@ -1,6 +1,6 @@
 
 <div class="wrapper flex overflow-hidden">
-	<div class=" w-3/4">
+	<div class=" w-2/3">
 		<?php get_template_part( 'template-parts/header-main' ); ?>
 		<div class="hero h-full relative ">
 			<p class="vertical-note"><?php the_field( 'hero_vertical_note' ); ?></p>
@@ -21,7 +21,7 @@
 		</div>
 	</div>
 
-	<aside class="bg-emerald-400 w-1/4 relative">
+	<aside class="bg-light w-1/3 relative">
 		<figure class="h-dvh">
 			<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/hero-img-01.jpg' ) ); ?>" alt="hero img" class="object-cover w-full h-full">
 		</figure>
@@ -34,13 +34,11 @@
 					Lorem ipsum dolor sit amet consectetur adipisicing elit.
 				</div>
 			</div> -->
-			<div class="sticky left-0 top-0 h-24 w-full bg-pink-300 flex items-center justify-center rotate-90">
-
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-
-			</div>
-			<div class="fixed right-0 bottom-0 w-56 h-svh flex items-center justify-center">
-				<nav class="nav">
+			<div class="fixed top-0 right-0 bottom-0 flex flex-col items-end justify-between">
+				<figure class="p-6">
+					<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/globe.svg' ) ); ?>" alt="hero img" class="object-cover w-full h-full">
+				</figure>
+				<nav class="main-nav">
 					<?php
 						wp_nav_menu(
 							array(
