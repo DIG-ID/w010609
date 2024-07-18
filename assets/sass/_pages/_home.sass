@@ -4,3 +4,21 @@
     content:''
     background-image: url('../../assets/images/bg-squares.min.svg')
     @apply bg-cover bg-no-repeat bg-center block w-full h-full absolute opacity-5 bg-fixed
+
+.section-the-collection
+  &:hover
+    .btn--vertical
+      &::after
+        @apply translate-x-full text-red
+    figure
+      img
+        @apply translate-x-0 opacity-100
+
+.section-the-story
+  &:hover
+    .btn--vertical
+      &::after
+        @apply translate-x-full text-light
+    figure
+      img
+        @apply translate-x-0 opacity-100
