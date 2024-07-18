@@ -1,4 +1,4 @@
-<div class="external-links bg-light">
+<section class="section-external-links bg-light">
 	<div class="wrapper flex">
 		<div class="w-2/3 pb-36">
 			<div class="bg-dark w-full h-64"></div>
@@ -27,4 +27,4 @@
 			</figure>
 		</div>
 	</div>
-</div>
+</section>

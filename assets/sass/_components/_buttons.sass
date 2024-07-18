@@ -8,7 +8,9 @@
       &::after
         @apply text-red
   &--vertical
-    @apply font-neueMachina font-extrabold uppercase text-[70px] leading-[70px] tracking-[-1.4px] transition-all duration-500 ease-in-out inline-block
-    &::after
+    @apply font-neueMachina font-extrabold uppercase text-[70px] leading-[70px] tracking-[-1.4px] transition-all duration-500 ease-in-out inline-block relative
+  &--arrow
+    @apply absolute block top-full left-0 w-full border border-pink-400
+    &::before
       content: '>>'
-      @apply block transition-all duration-700 ease-in-out
+      @apply inline-block transition-all duration-700 ease-in-out border border-blue-300 whitespace-nowrap

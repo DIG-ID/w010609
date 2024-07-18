@@ -1,24 +1,23 @@
 
-<div class="wrapper flex">
+<div class="wrapper flex overflow-hidden">
 	<div class=" w-3/4">
 		<?php get_template_part( 'template-parts/header-main' ); ?>
-		<div class="hero">
-			<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/smile.png' ) );?>" alt="smile">
-			<h1 class="font-monumentExtend font-extralight text-light text-[82px] leading-[76px] uppercase">
-				<?php _e( 'A true <br>statement of <span class="font-extrabold">empowerment.</span>', 'w010609' ); ?>
-			</h1>
-			<h1 class="font-monumentExtend font-extralight text-light text-[82px] leading-[76px] uppercase">
-				<?php _e( 'A true <br>statement of <span class="font-extrabold">empowerment.</span>', 'w010609' ); ?>
-			</h1>
-			<h1 class="font-monumentExtend font-extralight text-light text-[82px] leading-[76px] uppercase">
-				<?php _e( 'A true <br>statement of <span class="font-extrabold">empowerment.</span>', 'w010609' ); ?>
-			</h1>
-			<h1 class="font-monumentExtend font-extralight text-light text-[82px] leading-[76px] uppercase">
-				<?php _e( 'A true <br>statement of <span class="font-extrabold">empowerment.</span>', 'w010609' ); ?>
-			</h1>
-			<h1 class="font-monumentExtend font-extralight text-light text-[82px] leading-[76px] uppercase">
-				<?php _e( 'A true <br>statement of <span class="font-extrabold">empowerment.</span>', 'w010609' ); ?>
-			</h1>
+		<div class="hero h-full relative ">
+			<p class="vertical-note"><?php the_field( 'hero_vertical_note' ); ?></p>
+			<div class=" py-12 px-8">
+				<figure class="w-full flex justify-end">
+					<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/smile.png' ) );?>" alt="smile">
+				</figure>
+				<h1 class="font-monumentExtend font-extralight text-light text-[82px] leading-[76px] uppercase mb-80">
+					<?php the_field( 'hero_title' ); ?>
+				</h1>
+				<div class="flex flex-col justify-between h-full">
+					<p class="text-description text-light text-right max-w-3xl self-end"><?php the_field( 'hero_description_1' ); ?></p>
+					<p class="text-description text-light max-w-3xl"><?php the_field( 'hero_description_2' ); ?></p>
+				</div>
+
+			</div>
+
 		</div>
 	</div>
 
