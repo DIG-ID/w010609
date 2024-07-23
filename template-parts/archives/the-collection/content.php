@@ -1,5 +1,5 @@
 <section id="the-collection" class="wrapper flex">
-    <div class="w-3/4">
+    <div class="w-2/3">
         <?php get_template_part('template-parts/header-small'); ?>
         <div class="collection__list bg-red py-14">
         <?php
@@ -62,8 +62,14 @@
                 if ($total_posts < 2) :
                 ?>
                     <div class="collection__item flex flex-col justify-center items-center custom-element">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/smile.png" alt="" title="">
-                        <p>This is a custom element inserted as the penultimate item.2</p>
+                        <div class="grid grid-cols-1 md:grid-cols-5 h-full relative">
+                            <div class="col-span-2 md:col-start-1">
+                                <img class="w-[180px]" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/smile.png" alt="smile icon" title="Smile Icon">
+                            </div>
+                            <div class="col-span-2 md:col-start-4">
+                                <p class="font-monumentExtend text-[36px] leading-[46px] absolute bottom-[245px] right-[-30%] uppercase rotate-[270deg]"><span>A true</span><br><span>statement of</span><br><span class=" font-black">Empowerment</span></p>
+                            </div>
+                        </div>
                     </div>
                 <?php
                 endif;
@@ -80,8 +86,12 @@
         ?>
         </div>
     </div>
-    <aside class="bg-white w-1/4 relative">
-    <div class="w-full h-full absolute z-10 left-0 right-0 top-0">
+    <aside class="bg-white w-1/3 relative">
+        <div class="p-6 border-b-2 border-red">
+            <p class="font-neueMachina uppercase text-red text-[22px] leading-[26px] mb-16"><?php echo esc_html( 'It\'s not just about clothes.' ); ?><br><?php echo esc_html( 'It\'s a vibe, a movement.' ); ?></p>
+            <p class="font-neueMachina uppercase text-[70px] text-red leading-none font-extrabold"><?php echo esc_html( 'The' ); ?><br><?php echo esc_html( 'Collection' ); ?></p>
+        </div>
+        <div class="w-full h-full absolute z-10 left-0 right-0 top-0">
 			<div class="fixed top-0 right-0 bottom-0 flex flex-col items-end justify-between">
 				<figure class="p-6">
 					<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/globe.svg' ) ); ?>" alt="hero img" class="object-cover w-full h-full">
