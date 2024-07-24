@@ -1,6 +1,3 @@
-<style>
-    footer{position:relative;}
-</style>
 <section id="the-collection" class="wrapper flex">
     <div class="w-2/3">
         <?php get_template_part('template-parts/header-small'); ?>
@@ -16,16 +13,15 @@
         if ($the_query->have_posts()) :
             $total_posts = $the_query->post_count;
             $current_post = 0;
-            $title_id = 1; // Initialize a counter for title IDs
+            $title_id = 1;
         ?>
             <div class="collection__list grid grid-cols-1 md:grid-cols-2 gap-4">
                 <?php
                 while ($the_query->have_posts()) : $the_query->the_post();
                     $current_post++;
-                    // Insert custom element at the penultimate position
                     if ($current_post == $total_posts) :
                 ?>
-                    <div class="collection__item flex flex-col justify-center items-center custom-element" data-title-id="<?php echo $title_id; ?>">
+                    <div class="collection__item flex flex-col justify-center items-center custom-element">
                         <div class="grid grid-cols-1 md:grid-cols-5 h-full relative">
                             <div class="col-span-2 md:col-start-1">
                                 <img class="w-[180px]" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/smile.png" alt="smile icon" title="Smile Icon">
@@ -36,7 +32,7 @@
                         </div>
                     </div>
                 <?php
-                    $title_id++; // Increment title ID
+                    $title_id++;
                     endif;
 
                     // Get the gallery field
@@ -47,15 +43,15 @@
                         $first_image = $gallery[0];
                         $second_image = $gallery[1];
                 ?>
-                    <div class="collection__item flex flex-col justify-center items-center mb-24" data-title-id="<?php echo $title_id; ?>">
+                    <div class="collection__item flex flex-col justify-center items-center mb-24">
                         <a href="<?php the_permalink(); ?>" class="image-swap-container">
                             <img src="<?php echo esc_url($first_image['url']); ?>" alt="<?php echo esc_attr($first_image['alt']); ?>" class="w-full h-auto rounded-[30px] first-image transition-opacity duration-500 ease-in-out">
                             <img src="<?php echo esc_url($second_image['url']); ?>" alt="<?php echo esc_attr($second_image['alt']); ?>" class="w-full h-auto rounded-[30px] second-image hidden transition-opacity duration-500 ease-in-out">
                         </a>
                     </div>
                 <?php
-                    $title_id++; // Increment title ID
-                    endif; // End if $gallery
+                    $title_id++; 
+                    endif;
                 endwhile;
                 ?>
                 <?php
@@ -73,7 +69,7 @@
                         </div>
                     </div>
                 <?php
-                $title_id++; // Increment title ID
+                $title_id++; 
                 endif;
                 ?>
             </div>
@@ -88,12 +84,12 @@
         ?>
         </div>
     </div>
-    <aside class="bg-white w-1/3 fixed right-0 top-0 h-full">
-        <div class="p-6 border-b-2 border-red">
+    <aside class="bg-[#D9D9D9] w-1/3 fixed right-0 top-0 h-full">
+        <div class="pt-4 pb-11 pl-8 pr-6 border-b-2 border-red">
             <p class="font-neueMachina uppercase text-red text-[22px] leading-[26px] mb-16"><?php echo esc_html( 'It\'s not just about clothes.' ); ?><br><?php echo esc_html( 'It\'s a vibe, a movement.' ); ?></p>
-            <p class="font-neueMachina uppercase text-[70px] text-red leading-none font-extrabold"><?php echo esc_html( 'The' ); ?><br><?php echo esc_html( 'Collection' ); ?></p>
+            <h1 class="font-neueMachina uppercase text-[70px] text-red leading-none font-extrabold"><?php echo esc_html( 'The' ); ?><br><?php echo esc_html( 'Collection' ); ?></h1>
         </div>
-        <div class="p-6">
+        <div class="py-11 pl-8 pr-20">
             <?php
             $info_query = new WP_Query(
                 array(
@@ -107,7 +103,23 @@
                 while ( $info_query->have_posts() ) :
                     $info_query->the_post();
                     ?>
-                        <h2 class="dynamic-title font-bold text-xl hidden" data-title-id="<?php echo $title_id; ?>"><?php the_title(); ?></h2>
+                        <div class="dynamic-title-container hidden" data-title-id="<?php echo $title_id; ?>">
+                            <h2 class="font-monumentExtend font-bold text-[22px] leading-[30px] text-dark uppercase"><?php the_title(); ?></h2>
+                            <h2 class="font-monumentExtend font-light text-[22px] leading-[30px] text-dark uppercase"><?php echo get_field('type'); ?></h2>
+                            <div class="features-list font-neueMachina text-[18px] font-normal leading-[30px] text-dark mt-9"><?php echo get_field( 'features_list' ); ?></div>
+                            <div class="description-overview font-neueMachina text-[18px] font-normal leading-[30px] text-dark mt-8"><?php echo get_field( 'description' ); ?></div>
+                            <?php if ($colors = get_the_terms(get_the_ID(), 'color')): ?>
+                                <div class="colors-list font-neueMachina text-[18px] font-normal leading-[30px] text-dark mt-4">
+                                    <div class="flex space-x-2">
+                                        <span class="font-neueMachina text-[18px] leading-[30px] font-extrabold uppercase text-dark">Colors:</span>
+                                        <?php foreach ($colors as $color): ?>
+                                            <div class="w-[60px] h-[26px] rounded-full border border-dark <?php echo esc_attr('bg-' . strtolower($color->name)); ?>" title="<?php echo esc_attr($color->name); ?>"></div>
+                                        <?php endforeach; ?>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
+                            <p class=" font-neueMachina text-red text-[36px] leading-none font-extrabold uppercase mt-8"><?php echo get_field( 'price' ); ?></p>
+                        </div>
                     <?php
                     $title_id++; // Increment title ID
                 endwhile;
@@ -115,6 +127,8 @@
             endif;
             ?>
         </div>
+
+
         <div class="w-full h-full absolute z-10 left-0 right-0 top-0">
 			<div class="fixed top-0 right-0 bottom-0 flex flex-col items-end justify-between">
 				<figure class="p-6">
@@ -141,27 +155,26 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        const collectionItems = document.querySelectorAll('.collection__item');
-        const dynamicTitles = document.querySelectorAll('.dynamic-title');
+        const collectionItems = document.querySelectorAll('.collection__item:not(.custom-element)');
+        const titleContainers = document.querySelectorAll('.dynamic-title-container');
 
-        collectionItems.forEach(item => {
-            const titleId = item.getAttribute('data-title-id');
+        // Show the first title container by default
+        if (titleContainers.length > 0) {
+            titleContainers[0].classList.remove('hidden');
+        }
 
-            item.addEventListener('mouseenter', () => {
-                dynamicTitles.forEach(title => {
-                    if (title.getAttribute('data-title-id') === titleId) {
-                        title.style.display = 'block';
-                    } else {
-                        title.style.display = 'none';
+        collectionItems.forEach((item, index) => {
+            const link = item.querySelector('a');
+
+            if (link) {
+                link.addEventListener('mouseenter', () => {
+                    titleContainers.forEach(title => title.classList.add('hidden'));
+                    const titleToShow = document.querySelector(`.dynamic-title-container[data-title-id="${index + 1}"]`);
+                    if (titleToShow) {
+                        titleToShow.classList.remove('hidden');
                     }
                 });
-            });
-
-            item.addEventListener('mouseleave', () => {
-                dynamicTitles.forEach(title => {
-                    title.style.display = 'none';
-                });
-            });
+            }
         });
 
         const imageSwapContainers = document.querySelectorAll('.image-swap-container');
