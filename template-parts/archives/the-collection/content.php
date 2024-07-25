@@ -1,7 +1,7 @@
 <section id="the-collection" class="wrapper flex">
     <div class="w-2/3">
         <?php get_template_part('template-parts/header-small'); ?>
-        <div class="collection__list bg-red py-14">
+        <div class="collection__list bg-red py-14 xl:px-14">
         <?php
         $args = array(
             'post_type'      => 'the-collection',
@@ -15,7 +15,7 @@
             $current_post = 0;
             $title_id = 1;
         ?>
-            <div class="collection__list grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="collection__list grid grid-cols-1 md:grid-cols-2">
                 <?php
                 while ($the_query->have_posts()) : $the_query->the_post();
                     $current_post++;

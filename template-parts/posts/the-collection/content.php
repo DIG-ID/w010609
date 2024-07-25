@@ -76,6 +76,24 @@
                 <p class=" font-neueMachina text-red text-[36px] leading-none font-extrabold uppercase mt-8"><?php echo get_field( 'price' ); ?></p>
             </div>  
         </div>
+        <div class="py-5 pl-8 pr-[30%] border-t-2 border-red flex justify-between">
+            <?php
+                $previous_post = get_previous_post();
+                $next_post = get_next_post();
+
+                if ($previous_post) {
+                    ?>
+                    <a href="<?php echo get_permalink($previous_post); ?>" class="btn--postNav rotate-180"></a>
+                <?php
+                }
+
+                if ($next_post) {
+                    ?>
+                    <a href="<?php echo get_permalink($next_post); ?>" class="btn--postNav"></a>
+                <?php
+                }
+			?>
+        </div>
 
         <div class="w-full h-full absolute z-10 left-0 right-0 top-0 hidden">
 			<div class="fixed top-0 right-0 bottom-0 flex flex-col items-end justify-between">

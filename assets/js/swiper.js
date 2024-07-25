@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		if (document.body.classList.contains("single-the-collection")) {
 
             var galleryThumbs = new Swiper(".swiper-thumbnails", {
-                spaceBetween: 16,
+                spaceBetween: 10,
                 slidesPerView: 1,
                 freeMode: true,
                 watchSlidesVisibility: true,
@@ -15,8 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 direction: 'vertical',
                 breakpoints: {
                     640: {
-                        slidesPerView: 1,
-                        direction: 'horizontal'
+                        slidesPerView: 6,
                     }
                 }
             });
