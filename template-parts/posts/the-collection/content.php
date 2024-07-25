@@ -1,8 +1,32 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'wrapper flex' ); ?>>
     <div class="w-2/3">
         <?php get_template_part('template-parts/header-small'); ?>
-        <div class="collection__list bg-red py-14">
-        
+        <div class="collection__list bg-red py-14 h-full flex flex-row justify-center">
+            <?php 
+            $slider = get_field('image_gallery');
+            if( $slider ): ?>
+                <div class="swiper swiper-thumbnails">
+                    <div class="swiper-wrapper">
+                    <?php foreach( $slider as $slider_id_t ): ?>
+                        <div class="swiper-slide">
+                            <img src="<?php echo esc_url($slider_id_t['url']); ?>" class="rounded-[15px]" alt="<?php echo esc_attr($slider_id_t['alt']); ?>" width="120" height="120">
+                        </div>
+                    <?php endforeach; ?>
+                    </div>
+                </div>
+                <div class="swiper swiper-collection">
+                    <div class="swiper-wrapper">
+                        <?php foreach( $slider as $slider_id ): ?>
+                            <div class="swiper-slide">
+                                <img src="<?php echo esc_url($slider_id['url']); ?>" class="rounded-[30px]" alt="<?php echo esc_attr($slider_id['alt']); ?>" width="912" height="872" />
+                        </div>
+                        <?php endforeach; ?>
+                    </div>
+                    <!-- Add Navigation -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            <?php endif; ?>
         </div>
     </div>
     <aside class="bg-[#D9D9D9] w-1/3">
@@ -53,7 +77,7 @@
             </div>  
         </div>
 
-        <div class="w-full h-full absolute z-10 left-0 right-0 top-0">
+        <div class="w-full h-full absolute z-10 left-0 right-0 top-0 hidden">
 			<div class="fixed top-0 right-0 bottom-0 flex flex-col items-end justify-between">
 				<figure class="p-6">
 					<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/globe.svg' ) ); ?>" alt="hero img" class="object-cover w-full h-full">
