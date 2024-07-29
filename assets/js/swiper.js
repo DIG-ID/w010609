@@ -8,14 +8,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
             var galleryThumbs = new Swiper(".swiper-thumbnails", {
                 spaceBetween: 10,
-                slidesPerView: 1,
+                slidesPerView: 4,
                 freeMode: true,
                 watchSlidesVisibility: true,
                 watchSlidesProgress: true,
-                direction: 'vertical',
+                direction: 'horizontal',
                 breakpoints: {
-                    640: {
+                    1280: {
                         slidesPerView: 6,
+                        direction: 'vertical',
                     }
                 }
             });

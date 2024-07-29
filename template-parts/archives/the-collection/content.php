@@ -1,5 +1,5 @@
 <section id="the-collection" class="wrapper flex bg-[#D9D9D9]">
-    <div class="w-full md:w-1/3 xl:w-2/3">
+    <div class="w-full md:w-1/3 xl:w-2/3 hidden md:block">
         <?php get_template_part('template-parts/header-small'); ?>
         <div class="collection__list bg-red pb-14 pt-64 xl:py-14 px-7 xl:px-14">
         <?php
@@ -86,11 +86,11 @@
         </div>
     </div>
     <aside class="bg-[#D9D9D9] w-full md:w-2/3 xl:w-1/3 relative xl:fixed right-0 top-0 h-full">
-        <div class="pt-16 xl:pt-4 pb-11 pl-8 pr-6 border-b-2 border-red">
+        <div class="pt-16 xl:pt-4 pb-11 px-4 md:pl-8 md:pr-6 border-b-2 border-red">
             <p class="font-neueMachina uppercase text-red text-[22px] leading-[26px] mb-16"><?php echo esc_html( 'It\'s not just about clothes.' ); ?><br><?php echo esc_html( 'It\'s a vibe, a movement.' ); ?></p>
             <h1 class="font-neueMachina uppercase text-[27px] xl:text-[70px] text-red leading-[30px] xl:leading-none font-extrabold"><?php echo esc_html( 'The' ); ?><br><?php echo esc_html( 'Collection' ); ?></h1>
         </div>
-        <div class="py-11 pl-8 pr-20">
+        <div class="py-0 md:py-11 px-0 md:pl-8 md:pr-20">
             <?php
             $info_query = new WP_Query(
                 array(
@@ -103,8 +103,19 @@
                 $title_id = 1; // Reset counter for titles
                 while ( $info_query->have_posts() ) :
                     $info_query->the_post();
+                    $gallery = get_field('overview_images');
+                    // Check if the gallery field has images
+                    if ($gallery && count($gallery) > 1):
+                        // Get the first and second images in the gallery
+                        $first_image = $gallery[0];
                     ?>
-                        <div class="dynamic-title-container mb-44 xl:mb-0 hidden" data-title-id="<?php echo $title_id; ?>">
+                    
+                        <a href="<?php the_permalink(); ?>" class="relative block md:hidden bg-red px-5 py-5 mb-5">
+                            <img src="<?php echo esc_url($first_image['url']); ?>" alt="<?php echo esc_attr($first_image['alt']); ?>" class="w-full h-auto rounded-[30px] first-image transition-opacity duration-500 ease-in-out">
+                            <p class="plusInfo absolute bottom-[4.5rem] left-1/2 -translate-x-1/2 font-neueMachina text-red text-[18px] font-extrabold uppercase"><?php echo esc_html( '+ info >' ) ?></p>
+                        </a>
+                        <?php endif; ?>
+                        <div class="dynamic-title-container mx-5 md:mx-0 mb-5 md:mb-44 xl:mb-0 hidden" data-title-id="<?php echo $title_id; ?>">
                             <h2 class="font-monumentExtend font-bold text-[16px] xl:text-[22px] leading-[20px] xl:leading-[30px] text-dark uppercase"><?php the_title(); ?></h2>
                             <h2 class="font-monumentExtend font-light text-[16px] xl:text-[22px] leading-[20px] xl:leading-[30px] text-dark uppercase"><?php echo get_field('type'); ?></h2>
                             <div class="features-list font-neueMachina text-[12px] xl:text-[18px] font-normal leading-[23px] xl:leading-[30px] text-dark mt-9"><?php echo get_field( 'features_list' ); ?></div>
@@ -123,6 +134,7 @@
                         </div>
                     <?php
                     $title_id++; // Increment title ID
+
                 endwhile;
                 wp_reset_postdata();
             endif;

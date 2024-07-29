@@ -1,20 +1,24 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'wrapper flex' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'wrapper flex flex-col md:flex-row' ); ?>>
     <div class="w-full md:w-1/3 xl:w-2/3">
         <?php get_template_part('template-parts/header-small'); ?>
-        <div class="collection__list bg-red py-14 h-full flex flex-row justify-center">
+        <div class="bg-[#D9D9D9] pt-4 pb-11 pl-8 pr-6 border-b-2 border-red block md:hidden">
+            <p class="font-neueMachina uppercase text-red text-[22px] leading-[26px] mb-16"><?php echo esc_html( 'It\'s not just about clothes.' ); ?><br><?php echo esc_html( 'It\'s a vibe, a movement.' ); ?></p>
+            <h1 class="font-neueMachina uppercase text-[27px] xl:text-[62px] 2xl:text-[70px] text-red leading-none font-extrabold"><?php echo esc_html( 'The' ); ?><br><?php echo esc_html( 'Collection' ); ?></h1>
+        </div>
+        <div class="collection__list bg-red py-14 px-9 h-full flex flex-col xl:flex-row justify-start xl:justify-center">
             <?php 
             $slider = get_field('image_gallery');
             if( $slider ): ?>
-                <div class="swiper swiper-thumbnails !hidden xl:!flex">
+                <div class="swiper swiper-thumbnails !flex order-2 xl:order-1">
                     <div class="swiper-wrapper">
                     <?php foreach( $slider as $slider_id_t ): ?>
                         <div class="swiper-slide">
-                            <img src="<?php echo esc_url($slider_id_t['url']); ?>" class="rounded-[15px]" alt="<?php echo esc_attr($slider_id_t['alt']); ?>" />
+                            <img src="<?php echo esc_url($slider_id_t['url']); ?>" class="rounded-[10px] xl:rounded-[15px]" alt="<?php echo esc_attr($slider_id_t['alt']); ?>" />
                         </div>
                     <?php endforeach; ?>
                     </div>
                 </div>
-                <div class="swiper swiper-collection">
+                <div class="swiper swiper-collection order-1 xl:order-2">
                     <div class="swiper-wrapper">
                         <?php foreach( $slider as $slider_id ): ?>
                             <div class="swiper-slide">
@@ -30,9 +34,9 @@
         </div>
     </div>
     <aside class="bg-[#D9D9D9] w-full md:w-2/3 xl:w-1/3">
-        <div class="pt-4 pb-11 pl-8 pr-6 border-b-2 border-red">
+        <div class="pt-4 pb-11 pl-8 pr-6 border-b-2 border-red hidden md:block">
             <p class="font-neueMachina uppercase text-red text-[22px] leading-[26px] mb-16"><?php echo esc_html( 'It\'s not just about clothes.' ); ?><br><?php echo esc_html( 'It\'s a vibe, a movement.' ); ?></p>
-            <h1 class="font-neueMachina uppercase text-[70px] text-red leading-none font-extrabold"><?php echo esc_html( 'The' ); ?><br><?php echo esc_html( 'Collection' ); ?></h1>
+            <h1 class="font-neueMachina uppercase text-[27px] xl:text-[62px] 2xl:text-[70px] text-red leading-none font-extrabold"><?php echo esc_html( 'The' ); ?><br><?php echo esc_html( 'Collection' ); ?></h1>
         </div>
         <div class="py-11 pl-8 pr-20">
             <div class="dynamic-title-container">
@@ -77,7 +81,7 @@
                 <a href="<?php echo get_field( 'isa_url' ); ?>" class=" font-neueMachina text-[18px] leading-[30px] font-extrabold uppercase"><?php echo esc_html( 'Go to ISA Product Page >>' ) ?></a>
             </div>  
         </div>
-        <div class="py-5 pl-8 pr-[30%] border-t-2 border-red flex justify-between">
+        <div class="py-5 pl-8 pr-8 xl:pr-[30%] border-t-2 border-red flex justify-between">
             <?php
                 $previous_post = get_previous_post();
                 $next_post = get_next_post();
