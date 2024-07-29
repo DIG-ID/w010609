@@ -25,7 +25,7 @@
 				);
 			?>
 		</div>
-		<div class="devby flex justify-end items-center col-span-2 mt-40">
+		<div class="devby flex justify-end items-center col-span-2 mt-40 lg:mt-0">
 			<p class="font-neueMachina font-normal leading-7 text-2xl text-dark uppercase lg:mr-6"><?php esc_html_e( 'Design & development by:', 'w010609' ); ?>
 				<a href="https::/dig.id" target="_blank" class="">
 					dig.id
