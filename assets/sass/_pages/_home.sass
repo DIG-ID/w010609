@@ -9,6 +9,13 @@
     text-orientation: mixed
     writing-mode: vertical-rl
 
+.hero.header-shrink
+  @apply pt-28
+
+.fixed-assets
+  &__numbers
+    @apply font-neueMachina text-[8px] xl:text-lg text-light tracking-[1.62px] fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-svh py-14 xl:py-32 px-2 xl:px-12 flex flex-col justify-around prevent-select z-20 xl:z-10 invisible transition-all duration-300 ease-in-out
+
 .section-the-collection
   &:hover
     .btn--vertical
@@ -26,3 +33,24 @@
     figure
       img
         @apply translate-x-0 opacity-100
+
+
+@keyframes shopbtn-text-slide
+  from
+    transform: translateY(0)
+  to
+    transform: translateY(100%)
+
+.shop-btn-slider
+  .text-slide
+    display: inline-block
+    animation: 20s shopbtn-text-slide infinite linear
+  &:hover
+    .text-slide
+       animation-play-state: paused
+
+.text-slider
+
+  //text-orientation: mixed
+  //writing-mode: vertical-rl
+  //animation: 20s shopbtn-text-slide infinite linear

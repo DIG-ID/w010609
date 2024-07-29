@@ -131,3 +131,67 @@ gsap.from('.image-02', {
     .from('.section-footer .triangle', { y: 40, opacity: 0, autoAlpha: 0, duration: 1 }, 1);
 
 //});
+
+document.addEventListener("DOMContentLoaded", () => {
+  //wait until images, links, fonts, stylesheets, and js is loaded
+  window.addEventListener("load", () => {
+
+    //slider text
+    var shopBtnSlider = document.querySelector(".text-slider");
+    var shopBtnContent = document.querySelector(".text-slider-img");
+    var numberOfCopies = 3;  // Number of times to append the content
+
+    for (var i = 0; i < numberOfCopies; i++) {
+        var shopBtnContentCopy = shopBtnContent.cloneNode(true);
+        shopBtnSlider.appendChild(shopBtnContentCopy);
+    }
+
+
+    //header shrink on scroll
+    $(window).on( 'scroll', function() {
+      var header = $('#header-main');
+      var hero = $('.hero');
+      var logo = $('.header-logo');
+      var scrollTop = $(window).scrollTop();
+      var threshold = 0; 
+      //var isSticky = header.hasClass('sticky');
+    
+      if (scrollTop > threshold) {
+        //header.addClass('sticky');
+        //maincontent.addClass( 'content-padding-top' );
+        
+ 
+        header.addClass('header-shrink');
+        hero.addClass('header-shrink');
+      } else if (scrollTop <= threshold) {
+        //header.removeClass('sticky');
+        //maincontent.removeClass( 'content-padding-top' );
+        header.removeClass('header-shrink');
+        hero.removeClass('header-shrink');
+      }
+    });
+
+
+    //header menu open/close - Hamburguer toggle
+    const $toggleBtn = $('.menu-toggle')
+    $toggleBtn.on('click', (e) => {
+
+      if( $('#header-main').hasClass( 'menu-open' ) ) {
+        $('#header-main').removeClass('menu-open');
+        $('body').css('overflow', 'auto');
+        $('.mega-menu').slideUp(700);
+      } else {
+        $('#header-main').addClass('menu-open');
+        $('body').css('overflow', 'hidden');
+        $('.mega-menu').slideDown(700);
+      }
+    });
+
+  }, false);
+});
+
+
+
+if ($(window).width() < 640) {
+
+}

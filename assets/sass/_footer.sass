@@ -1,11 +1,12 @@
 #main-footer
   #menu-footer
-    @apply flex
+    @apply flex flex-col lg:flex-row
     .menu-item
-      @apply relative
+      @apply relative leading-none text-right
       &::after
         content: '●'
-        @apply inline-block px-2
+        @apply hidden lg:inline-block lg:px-2
+
       &:last-child
         &::after
           @apply hidden

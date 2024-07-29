@@ -4,7 +4,7 @@
   #main-menu
     @apply flex
     .menu-item
-      @apply relative
+      @apply relative flex 
       &::after
         content: ''
         @apply border-b border-b-dark inline-block w-full my-8
@@ -13,3 +13,25 @@
           @apply border-none mx-0
       a
         @apply font-monumentExtend font-bold text-lg text-dark uppercase pr-8 inline-block transition-all duration-300 ease-in-out
+
+.mega-menu
+  height: calc( 100dvh - 84px )
+.mega-nav
+  @apply px-4 py-6
+  #mega-menu
+    @apply flex flex-col text-right
+    .menu-item
+      a
+        @apply font-monumentExtend font-bold text-lg text-dark uppercase
+
+
+.menu-toggle
+  @apply flex items-center gap-x-8 overflow-hidden w-14 h-8 absolute right-4 top-4
+  .bar
+    @apply block w-14 h-[3px] bg-dark absolute opacity-100 rounded-full transition-all duration-500 ease-out
+    &:nth-child(1)
+      @apply top-1 right-0 
+    &:nth-child(2)
+      @apply top-4 right-0 w-12
+    &:nth-child(3)
+      @apply top-7 right-0 w-10
