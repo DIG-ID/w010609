@@ -4,12 +4,19 @@
     to
         opacity: 1
 
+@keyframes halfFade
+    from
+        opacity: 0.9
+    to
+        opacity: 1
+
 
 .post-type-archive-the-collection
 
     .fade-in
         animation: fadeIn 0.3s ease-in forwards
-
+    .halfFade
+        animation: halfFade 0.5s ease-in forwards
     footer
         @apply relative
     .description-overview
@@ -39,6 +46,10 @@
 .scrollable-div::-webkit-scrollbar
     width: 0px
     height: 0px
+
+.sizes-list
+    span:not(:first-child):not(:last-child)::after
+        content: " /"
 
 @media ( max-width: 1280px )
     .dynamic-title-container

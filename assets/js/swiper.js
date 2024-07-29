@@ -23,6 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
             
             var galleryTop = new Swiper(".swiper-collection", {
                 spaceBetween: 10,
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true
+                },
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',

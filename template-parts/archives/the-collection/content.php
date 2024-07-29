@@ -45,8 +45,8 @@
                 ?>
                     <div class="collection__item flex flex-col justify-start xl:justify-center h-auto md:h-[550px] xl:h-auto items-center xl:mb-24 xl:px-5 2xl:px-0">
                         <a href="<?php the_permalink(); ?>" class="image-swap-container relative">
-                            <img src="<?php echo esc_url($first_image['url']); ?>" alt="<?php echo esc_attr($first_image['alt']); ?>" class="w-full h-auto rounded-[30px] first-image transition-opacity duration-500 ease-in-out">
-                            <img src="<?php echo esc_url($second_image['url']); ?>" alt="<?php echo esc_attr($second_image['alt']); ?>" class="w-full h-auto rounded-[30px] second-image hidden transition-opacity duration-500 ease-in-out">
+                            <img src="<?php echo esc_url($first_image['url']); ?>" alt="<?php echo esc_attr($first_image['alt']); ?>" class="w-full h-auto rounded-[30px] first-image halfFade">
+                            <img src="<?php echo esc_url($second_image['url']); ?>" alt="<?php echo esc_attr($second_image['alt']); ?>" class="w-full h-auto rounded-[30px] second-image hidden halfFade">
                             <p class="plusInfo absolute hidden bottom-[4.5rem] left-1/2 -translate-x-1/2 font-neueMachina text-red text-[18px] font-extrabold uppercase"><?php echo esc_html( '+ info >' ) ?></p>
                         </a>
                     </div>
