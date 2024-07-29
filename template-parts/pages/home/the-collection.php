@@ -1,16 +1,12 @@
-<div class="flex flex-row md:flex-col">
-
-
-<section class="section-the-collection bg-light block overflow-hidden w-1/2 lg:w-full">
+<section class="section-the-collection bg-light block overflow-hidden w-full sm:w-1/2 lg:w-full">
 	<a href="<?php the_field( 'the_collection_link' ); ?>" >
-		<div class="content-wrapper flex flex-col lg:flex-row">
+		<div class="section-the-collection--content flex flex-col lg:flex-row">
 			<div class="w-full lg:w-2/3 lg:px-14 lg:py-16 px-4 py-6">
 				<div class="flex flex-col h-80 lg:h-full justify-between">
 					<div>
 						<h2 class="btn--vertical text-dark"><?php the_field( 'the_collection_title' ); ?></h2>
 					</div>
-					
-					<p class="text-description text-dark max-w-52 lg:max-w-md mb-8 self-end"><?php the_field( 'the_collection_description' ); ?></p>
+					<p class="text-description text-dark max-w-52 lg:max-w-md lg:mb-8 self-end"><?php the_field( 'the_collection_description' ); ?></p>
 				</div>
 			</div>
 			<div class="w-full lg:w-1/3">

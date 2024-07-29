@@ -1,32 +1,33 @@
+<section class="section-hero flex overflow-hidden flex-col lg:flex-row">
 
-<div class="wrapper flex overflow-hidden flex-col lg:flex-row">
-	<div class="w-full lg:w-2/3 relative">
-		<?php get_template_part( 'template-parts/header-main' ); ?>
-		<div class="hero relative lg:pt-[354px] transition-all duration-500 ease-in-out">
-			<p class="vertical-note absolute left-8 top-36 hidden invisible lg:block lg:visible"><?php the_field( 'hero_vertical_note' ); ?></p>
-			<div class="lg:h-dvh py-12 px-8 flex flex-col justify-start">
-				<figure class="w-full flex justify-end">
-					<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/smile.png' ) );?>" alt="smile" class="object-cover max-w-36 lg:max-w-full">
-				</figure>
-				<h1 class="font-monumentExtend font-extralight text-light text-[27px] leading-6 md:text-[84px] md:leading-[45px] lg:text-[82px] lg:leading-[76px] uppercase">
-					<?php the_field( 'hero_title' ); ?>
-				</h1>
-			</div>
-			<div class="lg:h-dvh pb-12 px-8">
-				<div class="flex flex-col justify-between h-full">
-					<p class="text-description text-light text-right max-w-3xl self-end"><?php the_field( 'hero_description_1' ); ?></p>
-					<p class="text-description text-light max-w-3xl"><?php the_field( 'hero_description_2' ); ?></p>
-				</div>
-			</div>
-		</div><!-- .hero -->
-		<div class="fixed-assets__numbers numbers">
+	<div class="section-hero--right-wrapper w-full lg:w-2/3 relative pt-[364px] transition-all duration-700 ease-in-out">
+		<p class="section-hero--vertical-note absolute left-8 top-36 hidden invisible lg:block lg:visible"><?php the_field( 'hero_vertical_note' ); ?></p>
+		<div class="section-hero--fixed-numbers">
 			<p class="flex justify-between"><span>0</span><span>1</span></p>
 			<p class="flex justify-between"><span>0</span><span>6</span></p>
 			<p class="flex justify-between"><span>0</span><span>9</span></p>
 		</div>
-	</div>
+		<div class="section-hero--content-right">
+			<div class="section-hero--content-right__section-01 lg:h-dvh flex flex-col justify-start relative py-6 px-9 lg:px-16">
 
-	<aside class="bg-light w-full lg:w-1/3 relative hidden invisible lg:block lg:visible">
+				<figure class="w-full flex justify-end mb-20">
+					<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/smile.png' ) ); ?>" alt="smile" class="object-cover max-w-36 lg:max-w-full">
+				</figure>
+				<h1 class="section-hero--title">
+					<?php the_field( 'hero_title' ); ?>
+				</h1>
+			</div><!-- .hero-content-right--section-01 -->
+			<div class="section-hero--content-right__section-02 lg:h-dvh py-12 px-9 lg:px-16">
+				<div class="flex flex-col justify-between h-full">
+					<p class="text-description text-light text-right max-w-[560px] lg:max-w-3xl self-end mb-[400px]"><?php the_field( 'hero_description_1' ); ?></p>
+					<p class="text-description text-light max-w-[560px] lg:max-w-[728px]"><?php the_field( 'hero_description_2' ); ?></p>
+				</div>
+			</div><!-- .hero-content-right--section-02 -->
+		</div><!-- .hero-content-right -->
+
+	</div><!-- .hero-content-right-wrapper -->
+
+	<aside class="section-hero--left-wrapper w-full lg:w-1/3 relative hidden invisible lg:block lg:visible bg-light">
 		<figure class="h-dvh">
 			<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/hero-img-01.jpg' ) ); ?>" alt="hero img" class="object-cover w-full h-full">
 			<?php
@@ -45,11 +46,7 @@
 			?>
 		</figure>
 		<div class="w-full h-full absolute z-10 left-0 right-0 top-0">
-			<!--<div class="sticky left-0 top-0 h-dvh w-12 bg-pink-300 flex items-center justify-center">
-				<div class="text-slide w-full h-full">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-				</div>
-			</div> -->
+
 			<div class="text-slider">
 				<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/mybody-mycanvas-text-slider.png' ) ); ?>" alt="hero img" class="text-slider-img object-cover max-w-full">
 			</div>
@@ -74,6 +71,6 @@
 			</div>
 
 		</div>
-	</aside>
+	</aside><!-- .hero-content-left-wrapper -->
 
-</div>
+</section>

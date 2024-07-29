@@ -1,5 +1,5 @@
 <footer id="main-footer" class="bg-red text-dark py-6 px-8">
-	<div class="lg:flex lg:justify-between lg:items-center grid grid-col-2">
+	<div class="grid grid-col-2 lg:flex lg:justify-between lg:items-end ">
 		<div class="footer-logo col-span-1">
 			<svg viewBox="0 0 365 53" fill="none" xmlns="http://www.w3.org/2000/svg" class="object-cover max-w-full w-full">
 				<path d="M46.5129 51.2274C37.5838 51.2274 28.6548 51.326 19.7454 51.2077C7.91887 51.0698 0.271025 40.5835 0.073916 24.3811C-0.00492773 18.5073 -0.0640606 12.6137 0.133049 6.75956C0.330158 0.491479 3.1094 -1.69644 7.15015 1.37847C16.2369 8.33643 20.7507 16.7727 34.1147 22.8831C37.4262 24.4008 38.7074 29.8016 40.6193 33.665C43.9702 40.485 50.1594 43.6782 55.7376 40.9186C59.4039 39.1052 61.3158 35.439 61.5326 30.1762C61.6509 27.2392 61.1384 24.1249 61.71 21.4048C61.7692 21.1485 61.8283 20.8923 61.9071 20.6558C62.9124 17.3049 67.8993 17.6006 68.4315 21.0697C68.4315 21.0894 68.4315 21.1091 68.4315 21.1485C69.0031 25.2878 68.6483 29.7031 68.5892 34.0001C68.53 38.1788 69.7127 41.1946 72.8861 41.1354C74.8967 40.9383 76.1582 39.4994 76.6115 34.0198C77.0057 29.4074 76.4538 24.4994 76.9663 19.8476C76.9663 19.6702 77.0057 19.5125 77.0649 19.3548C77.873 16.1814 82.5445 16.0828 83.4709 19.2169C83.5498 19.4534 83.5892 19.7096 83.6089 19.9659C84.0228 26.707 83.9637 33.527 83.7075 40.2879C83.4512 47.167 80.2186 51.05 74.7784 51.1486C65.3566 51.3063 55.9347 51.188 46.5129 51.188V51.2274Z" fill="#141414"/>
@@ -26,8 +26,8 @@
 			?>
 		</div>
 		<div class="devby flex justify-end items-center col-span-2 mt-40 lg:mt-0">
-			<p class="font-neueMachina font-normal leading-7 text-2xl text-dark uppercase lg:mr-6"><?php esc_html_e( 'Design & development by:', 'w010609' ); ?>
-				<a href="https::/dig.id" target="_blank" class="">
+			<p class="font-neueMachina font-bold leading-7 text-base lg:text-2xl text-dark uppercase lg:mr-6"><?php esc_html_e( 'Design & development by:', 'w010609' ); ?>
+				<a href="https::/dig.id" target="_blank" class="lowercase font-normal">
 					dig.id
 				</a>
 			</p>

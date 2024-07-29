@@ -1,20 +1,25 @@
-.hero
-  @apply relative
-  &::before
-    content:''
-    background-image: url('../../assets/images/bg-squares.png')
-    @apply bg-cover bg-no-repeat bg-center block w-full h-full absolute bg-fixed
-  .vertical-note
-    @apply font-neueMachina font-light text-xs uppercase text-light max-w-72 text-right rotate-180 absolute top-8 left-4
-    text-orientation: mixed
-    writing-mode: vertical-rl
+.section-hero
+  &--right-wrapper
+    &::before
+      content:''
+      background-image: url('../../assets/images/bg-squares.png')
+      @apply bg-cover bg-no-repeat bg-center block w-full h-full absolute left-0 top-0 bg-fixed
+  &--vertical-note
+      @apply font-neueMachina font-light text-xs uppercase text-light max-w-72 text-right rotate-180 absolute top-8 left-4
+      text-orientation: mixed
+      writing-mode: vertical-rl
+  &--fixed-numbers
+      @apply font-neueMachina text-[8px] xl:text-lg text-light tracking-[1.62px] fixed w-full lg:w-2/3 h-2/3 left-0 right-0 bottom-0 px-2 xl:px-6 flex flex-col justify-between prevent-select transition-all duration-300 ease-in-out py-20
+      z-index: -1
+  &--title
+    @apply font-monumentExtend font-extralight text-light text-[27px] leading-6 md:text-[48px] md:leading-[45px] lg:text-[82px] lg:leading-[76px] uppercase
+    span
+      @apply font-black
 
-.hero.header-shrink
-  @apply pt-28
+.section-hero--right-wrapper.header-shrink
+  @apply pt-[168px]
 
-.fixed-assets
-  &__numbers
-    @apply font-neueMachina text-[8px] xl:text-lg text-light tracking-[1.62px] fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-svh py-14 xl:py-32 px-2 xl:px-12 flex flex-col justify-around prevent-select z-20 xl:z-10 invisible transition-all duration-300 ease-in-out
+
 
 .section-the-collection
   &:hover
