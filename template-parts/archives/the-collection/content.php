@@ -1,5 +1,5 @@
 <section id="the-collection" class="wrapper flex bg-[#D9D9D9]">
-    <div class="w-full md:w-1/3 xl:w-2/3 hidden md:block">
+    <div class="w-full md:w-1/3 xl:w-2/3 hidden md:block bg-red">
         <?php get_template_part('template-parts/header-small'); ?>
         <div class="collection__list bg-red pb-14 pt-64 xl:py-14 px-7 xl:px-14">
         <?php
@@ -43,7 +43,7 @@
                         $first_image = $gallery[0];
                         $second_image = $gallery[1];
                 ?>
-                    <div class="collection__item flex flex-col justify-center items-center mb-24">
+                    <div class="collection__item flex flex-col justify-start xl:justify-center h-auto md:h-[550px] xl:h-auto items-center xl:mb-24 xl:px-5 2xl:px-0">
                         <a href="<?php the_permalink(); ?>" class="image-swap-container relative">
                             <img src="<?php echo esc_url($first_image['url']); ?>" alt="<?php echo esc_attr($first_image['alt']); ?>" class="w-full h-auto rounded-[30px] first-image transition-opacity duration-500 ease-in-out">
                             <img src="<?php echo esc_url($second_image['url']); ?>" alt="<?php echo esc_attr($second_image['alt']); ?>" class="w-full h-auto rounded-[30px] second-image hidden transition-opacity duration-500 ease-in-out">
@@ -115,7 +115,7 @@
                             <p class="plusInfo absolute bottom-[4.5rem] left-1/2 -translate-x-1/2 font-neueMachina text-red text-[18px] font-extrabold uppercase"><?php echo esc_html( '+ info >' ) ?></p>
                         </a>
                         <?php endif; ?>
-                        <div class="dynamic-title-container mx-5 md:mx-0 mb-5 md:mb-44 xl:mb-0 hidden" data-title-id="<?php echo $title_id; ?>">
+                        <div class="dynamic-title-container h-auto md:h-[550px] xl:h-auto mx-5 md:mx-0 mb-5 md:mb-0 xl:mb-0 hidden fade-in" data-title-id="<?php echo $title_id; ?>">
                             <h2 class="font-monumentExtend font-bold text-[16px] xl:text-[22px] leading-[20px] xl:leading-[30px] text-dark uppercase"><?php the_title(); ?></h2>
                             <h2 class="font-monumentExtend font-light text-[16px] xl:text-[22px] leading-[20px] xl:leading-[30px] text-dark uppercase"><?php echo get_field('type'); ?></h2>
                             <div class="features-list font-neueMachina text-[12px] xl:text-[18px] font-normal leading-[23px] xl:leading-[30px] text-dark mt-9"><?php echo get_field( 'features_list' ); ?></div>

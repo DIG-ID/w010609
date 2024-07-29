@@ -1,4 +1,15 @@
+@keyframes fadeIn
+    from
+        opacity: 0
+    to
+        opacity: 1
+
+
 .post-type-archive-the-collection
+
+    .fade-in
+        animation: fadeIn 0.3s ease-in forwards
+
     footer
         @apply relative
     .description-overview
@@ -29,7 +40,7 @@
     width: 0px
     height: 0px
 
-@media ( max-width: 1200px )
+@media ( max-width: 1280px )
     .dynamic-title-container
         display: block !important
     
