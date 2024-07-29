@@ -17,6 +17,22 @@
 					<?php the_field( 'hero_title' ); ?>
 				</h1>
 			</div><!-- .hero-content-right--section-01 -->
+			<div class="section-hero-image-mobile relative lg:hidden lg:invisible overflow-hidden">
+				<figure class="p-6 absolute right-0 top-0">
+					<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/globe.svg' ) ); ?>" alt="hero img" class="object-cover w-full h-full">
+				</figure>
+				<div class="text-slider absolute left-0 top-0">
+					<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/mybody-mycanvas-text-slider.png' ) ); ?>" alt="hero img" class="text-slider-img object-cover max-w-full">
+				</div>
+				<figure class="">
+					<?php
+					$image01 = get_field( 'hero_image_1' );
+					if ( $image01 ) {
+						echo wp_get_attachment_image( $image01, 'full', false, array( 'class' => 'object-cover w-full h-full' ) );
+					}
+					?>
+				</figure>
+			</div>
 			<div class="section-hero--content-right__section-02 lg:h-dvh py-12 px-9 lg:px-16">
 				<div class="flex flex-col justify-between h-full">
 					<p class="text-description text-light text-right max-w-[560px] lg:max-w-3xl self-end mb-[400px]"><?php the_field( 'hero_description_1' ); ?></p>
@@ -29,7 +45,6 @@
 
 	<aside class="section-hero--left-wrapper w-full lg:w-1/3 relative hidden invisible lg:block lg:visible bg-light">
 		<figure class="h-dvh">
-			<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/hero-img-01.jpg' ) ); ?>" alt="hero img" class="object-cover w-full h-full">
 			<?php
 			$image01 = get_field( 'hero_image_1' );
 			if ( $image01 ) {
