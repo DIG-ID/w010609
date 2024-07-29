@@ -23,8 +23,8 @@
                         <?php endforeach; ?>
                     </div>
                     <!-- Add Navigation -->
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next">&gt;</div>
+                    <div class="swiper-button-prev">&lt;</div>
                 </div>
             <?php endif; ?>
         </div>
@@ -97,25 +97,7 @@
         </div>
 
         <div class="w-full h-full absolute z-10 left-0 right-0 top-0 hidden">
-			<div class="fixed top-0 right-0 bottom-0 flex flex-col items-end justify-between">
-				<figure class="p-6">
-					<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/globe.svg' ) ); ?>" alt="hero img" class="object-cover w-full h-full">
-				</figure>
-				<nav class="main-nav">
-					<?php
-						wp_nav_menu(
-							array(
-								'menu'            => 'main-menu',
-								'menu_id'         => 'main-menu',
-								'container'       => false,
-								'container_class' => '',
-								'theme_location'  => 'main-menu',
-								'fallback_cb'     => '__return_false',
-							)
-						);
-					?>
-				</nav>
-			</div>
+			
 		</div>
     </aside>
 </article>
