@@ -1,6 +1,6 @@
 <section class="section-the-story flex flex-col md:flex-row xl:flex-row">
 	<div class="w-full md:w-1/3 xl:w-2/3 mt-[84px] px-16 pb-16 order-2 md:order-1">
-		<div class="flex md:flex-col xl:flex-row mb-52">
+		<div class="flex md:flex-col xl:flex-row xl:mb-52">
 			<div class="section-the-story--content mt-10 xl:mt-20 w-full pr-12 order-2 xl:order-1">
 				<?php the_content(); ?>
 				<svg width="49" height="31" viewBox="0 0 49 31" fill="none" xmlns="http://www.w3.org/2000/svg" class="max-w-full object-cover inline-block">
@@ -25,9 +25,18 @@
 				the_row();
 				?>
 				<div class="video-wrapper mb-28">
-					<h2 class="font-neueMachina font-normal text-red text-[22px] leading-[29px] uppercase mb-9"><?php the_subfield( 'title' ); ?></h2>
+					<h2 class="font-neueMachina font-normal text-red text-[22px] leading-[29px] uppercase mb-9"><?php the_sub_field( 'title' ); ?></h2>
 					<div class="embed-container">
-						<?php the_sub_field( 'video' ); ?>
+					<?php
+						$vfile = get_sub_field( 'video' );
+						if ( $vfile ) :
+							?>
+							<video controls>
+								<source src="<?php echo $vfile['url']; ?>">
+							</video>
+							<?php
+						endif;
+						?>
 					</div>
 				</div>
 				<?php
@@ -95,22 +104,31 @@
 
 
 </section>
-<div class="w-full xl:hidden xl:invisible mb-32">
-		<section class="section-about-the-project hidden invisible xl:block xl:visible mb-32">
+<div class="w-full xl:hidden xl:invisible mb-32 px-16">
+		<section class="section-about-the-project  mb-32">
 			<h2 class="font-neueMachina font-normal text-red text-[22px] leading-[29px] uppercase mb-9">About the project</h2>
 			<p class="font-neueMachina font-normal text-light text-[18px] leading-[29px]"><?php the_field( 'about_the_project_description' ); ?></p>
 		</section>
 
 		<?php
 		if ( have_rows( 'videos_video' ) ) :
-			?><section class="section-videos mb-32 hidden invisible xl:block xl:visible"><?php
+			?><section class="section-videos mb-32 "><?php
 			while ( have_rows( 'videos_video' ) ) :
 				the_row();
 				?>
 				<div class="video-wrapper mb-28">
-					<h2 class="font-neueMachina font-normal text-red text-[22px] leading-[29px] uppercase mb-9"><?php the_subfield( 'title' ); ?></h2>
+					<h2 class="font-neueMachina font-normal text-red text-[22px] leading-[29px] uppercase mb-9"><?php the_sub_field( 'title' ); ?></h2>
 					<div class="embed-container">
-						<?php the_sub_field( 'video' ); ?>
+						<?php
+						$vfile = get_sub_field( 'video' );
+						if ( $vfile ) :
+							?>
+							<video controls>
+								<source src="<?php echo $vfile['url']; ?>">
+							</video>
+							<?php
+						endif;
+						?>
 					</div>
 				</div>
 				<?php
