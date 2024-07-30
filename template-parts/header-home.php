@@ -3,6 +3,7 @@
 		<span class="bar"></span>
 		<span class="bar"></span>
 		<span class="bar"></span>
+		<span class="circle"></span>
 	</button>
 	<a class="inline-block w-full z-50" href="<?php echo esc_url( get_bloginfo( 'url' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
 		<svg viewBox="0 0 1120 162" fill="none" xmlns="http://www.w3.org/2000/svg" class="header-logo transition-all duration-500 ease-in-out w-full lg:w-[1120px] object-cover max-w-full z-50">

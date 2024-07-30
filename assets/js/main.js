@@ -76,12 +76,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const $toggleBtn = $('.menu-toggle')
     $toggleBtn.on('click', (e) => {
 
-      if( $('#header-main').hasClass( 'menu-open' ) ) {
-        $('#header-main').removeClass('menu-open');
+      if( $('#header-main, #header-home').hasClass( 'menu-open' ) ) {
+        $('#header-main, #header-home').removeClass('menu-open');
         $('body').css('overflow', 'auto');
         $('.mega-menu').slideUp(700);
       } else {
-        $('#header-main').addClass('menu-open');
+        $('#header-main, #header-home').addClass('menu-open');
         $('body').css('overflow', 'hidden');
         $('.mega-menu').slideDown(700);
       }

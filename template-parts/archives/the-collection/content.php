@@ -1,6 +1,5 @@
 <section id="the-collection" class="wrapper flex bg-[#D9D9D9]">
-	<div class="w-full md:w-1/3 xl:w-2/3 hidden md:block bg-red">
-		<?php get_template_part('template-parts/header-small'); ?>
+	<div class="w-full md:w-1/3 xl:w-2/3 hidden md:block bg-red pt-[69px] md:pt-[80px]">
 		<div class="collection__list bg-red pb-14 pt-64 xl:py-14 px-7 xl:px-14">
 		<?php
 		$args = array(
@@ -85,9 +84,9 @@
 		?>
 		</div>
 	</div>
-	<aside class="bg-[#D9D9D9] w-full md:w-2/3 xl:w-1/3 relative xl:fixed right-0 top-0 h-full">
+	<aside class="bg-[#D9D9D9] w-full md:w-2/3 xl:w-1/3 relative xl:fixed right-0 top-0 h-full pt-[69px] md:pt-[80px]">
 		<div class="pt-16 xl:pt-4 pb-11 px-4 md:pl-8 md:pr-6 border-b-2 border-red">
-			<p class="font-neueMachina uppercase text-red text-[22px] leading-[26px] mb-16"><?php echo esc_html( 'It\'s not just about clothes.' ); ?><br><?php echo esc_html( 'It\'s a vibe, a movement.' ); ?></p>
+			<p class="font-neueMachina uppercase text-red text-[22px] leading-[26px] mb-16 md:hidden md:invisible"><?php echo esc_html( 'It\'s not just about clothes.' ); ?><br><?php echo esc_html( 'It\'s a vibe, a movement.' ); ?></p>
 			<h1 class="font-neueMachina uppercase text-[27px] xl:text-[70px] text-red leading-[30px] xl:leading-none font-extrabold"><?php echo esc_html( 'The' ); ?><br><?php echo esc_html( 'Collection' ); ?></h1>
 		</div>
 		<div class="py-0 md:py-11 px-0 md:pl-8 md:pr-20">

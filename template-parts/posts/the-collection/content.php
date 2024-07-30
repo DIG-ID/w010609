@@ -1,5 +1,5 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'wrapper flex flex-col md:flex-row' ); ?>>
-	<div class="w-full md:w-1/3 xl:w-2/3">
+	<div class="w-full md:w-1/3 xl:w-2/3 pt-[69px] md:pt-[80px]">
 
 		<div class="bg-[#D9D9D9] pt-4 pb-11 pl-8 pr-6 border-b-2 border-red block md:hidden">
 				<p class="font-neueMachina uppercase text-red text-[22px] leading-[26px] mb-16"><?php echo esc_html( 'It\'s not just about clothes.' ); ?><br><?php echo esc_html( 'It\'s a vibe, a movement.' ); ?></p>
@@ -35,11 +35,11 @@
 		</div>
 
 	</div>
-	<aside class="bg-[#D9D9D9] w-full md:w-2/3 xl:w-1/3">
+	<aside class="bg-[#D9D9D9] w-full md:w-2/3 xl:w-1/3 pt-[69px] md:pt-[80px]">
 
 		<div class="pt-4 pb-11 pl-8 pr-6 border-b-2 border-red hidden md:block">
 			<p class="font-neueMachina uppercase text-red text-[22px] leading-[26px] mb-16"><?php echo esc_html( 'It\'s not just about clothes.' ); ?><br><?php echo esc_html( 'It\'s a vibe, a movement.' ); ?></p>
-				<h1 class="font-neueMachina uppercase text-[27px] xl:text-[62px] 2xl:text-[70px] text-red leading-none font-extrabold"><?php echo esc_html( 'The' ); ?><br><?php echo esc_html( 'Collection' ); ?></h1>
+			<h1 class="font-neueMachina uppercase text-[27px] xl:text-[62px] 2xl:text-[70px] text-red leading-none font-extrabold"><?php echo esc_html( 'The' ); ?><br><?php echo esc_html( 'Collection' ); ?></h1>
 		</div>
 
 		<div class="py-11 pl-8 pr-20">
