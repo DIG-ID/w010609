@@ -33,17 +33,19 @@ document.addEventListener("DOMContentLoaded", () => {
   //wait until images, links, fonts, stylesheets, and js is loaded
   window.addEventListener("load", () => {
 
-    //slider text
-    var shopBtnSlider = document.querySelector(".text-slider");
-    var shopBtnContent = document.querySelector(".text-slider-img");
-    var numberOfCopies = 3;  // Number of times to append the content
 
-    for (var i = 0; i < numberOfCopies; i++) {
-        var shopBtnContentCopy = shopBtnContent.cloneNode(true);
-        shopBtnSlider.appendChild(shopBtnContentCopy);
-    }
 
     if ( $(".page-template-page-home")[0] ) {
+      //slider text
+      var shopBtnSlider = document.querySelector(".text-slider");
+      var shopBtnContent = document.querySelector(".text-slider-img");
+      var numberOfCopies = 3;  // Number of times to append the content
+
+      for (var i = 0; i < numberOfCopies; i++) {
+          var shopBtnContentCopy = shopBtnContent.cloneNode(true);
+          shopBtnSlider.appendChild(shopBtnContentCopy);
+      }
+
       //header shrink on scroll
       lenis.on( 'scroll',  ({ scroll }) => {
         var header = $('#header-home');
