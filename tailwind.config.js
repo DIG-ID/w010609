@@ -3,6 +3,8 @@ module.exports = {
   content: [
     './header.php',
     './home.php',
+    './single.php',
+    './page.php',
     './index.php',
     './footer.php',
     './404.php',

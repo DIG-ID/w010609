@@ -1,3 +1,26 @@
 @import 'home'
 @import 'the-collection'
 @import 'the-story'
+
+
+.page-template-default
+  .page-single-content-wrapper
+    h2,
+    h3,
+    h4,
+    h5,
+    h6
+      @apply font-neueMachina uppercase  text-dark leading-none font-extrabold block mb-6
+    h2
+      @apply text-4xl
+    h3
+      @apply text-3xl
+    h4
+      @apply text-2xl
+    h5
+      @apply text-xl
+    h6
+      @apply text-base
+    p
+      font-feature-settings: 'dlig' on
+      @apply font-neueMachina font-normal text-dark text-base mb-6 xl:mb-12
