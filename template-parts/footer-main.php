@@ -1,4 +1,4 @@
-<footer id="main-footer" class="bg-red text-dark py-6 px-8">
+<footer id="main-footer" class="bg-red text-dark py-6 px-8 relative z-10">
 	<div class="grid grid-col-2 lg:flex lg:justify-between lg:items-end ">
 		<div class="footer-logo col-span-1">
 			<svg viewBox="0 0 365 53" fill="none" xmlns="http://www.w3.org/2000/svg" class="object-cover max-w-full w-full">
