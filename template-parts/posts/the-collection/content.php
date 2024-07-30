@@ -38,7 +38,7 @@
 	<aside class="bg-[#D9D9D9] w-full md:w-2/3 xl:w-1/3 pt-[69px] md:pt-[80px]">
 
 		<div class="pt-4 pb-11 pl-8 pr-6 border-b-2 border-red hidden md:block">
-			<p class="font-neueMachina uppercase text-red text-[22px] leading-[26px] mb-16"><?php echo esc_html( 'It\'s not just about clothes.' ); ?><br><?php echo esc_html( 'It\'s a vibe, a movement.' ); ?></p>
+			<p class="font-neueMachina uppercase text-red text-[22px] leading-[26px] mb-16 md:invisible md:hidden"><?php echo esc_html( 'It\'s not just about clothes.' ); ?><br><?php echo esc_html( 'It\'s a vibe, a movement.' ); ?></p>
 			<h1 class="font-neueMachina uppercase text-[27px] xl:text-[62px] 2xl:text-[70px] text-red leading-none font-extrabold"><?php echo esc_html( 'The' ); ?><br><?php echo esc_html( 'Collection' ); ?></h1>
 		</div>
 
