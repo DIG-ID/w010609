@@ -141,7 +141,7 @@
 		</div>
 
 
-		<div class="w-full h-full absolute z-10 left-0 right-0 top-0">
+		<div class="w-full h-full absolute z-10 left-0 right-0 top-0 hidden invisible xl:block xl:visible">
 			<div class="fixed top-0 right-0 bottom-0 flex flex-col items-end justify-between">
 				<figure class="p-6">
 					<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/globe.svg' ) ); ?>" alt="hero img" class="object-cover w-full h-full">
