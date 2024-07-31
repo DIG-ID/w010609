@@ -1,5 +1,5 @@
 <section class="section-the-story flex flex-col md:flex-row xl:flex-row">
-	<div class="w-full md:w-1/3 xl:w-2/3 pt-[69px] md:pt-[80px] px-8 xl:px-16 pb-16 order-2 md:order-1">
+	<div class="w-full md:w-1/3 xl:w-2/3 px-8 xl:px-16 pb-16 order-2 md:order-1 navigation-bumper">
 		<div class="flex md:flex-col xl:flex-row mb-16 xl:mb-52">
 			<div class="section-the-story--content mt-10 xl:mt-20 w-full xl:pr-12 order-2 xl:order-1">
 				<?php the_content(); ?>
@@ -47,7 +47,7 @@
 
 	</div>
 
-	<aside class="w-full md:w-2/3 xl:w-1/3 relative xl:fixed right-0 top-0 h-full bg-light z-[1] order-1 md:order-2 pt-[69px] md:pt-[80px]">
+	<aside class="w-full md:w-2/3 xl:w-1/3 relative xl:fixed right-0 top-0 h-full bg-light z-[1] order-1 md:order-2 navigation-bumper">
 
 		<div class="pt-4 pb-11 pl-8 pr-6 border-b-2 border-red">
 			<p class="font-neueMachina uppercase text-red text-[22px] leading-[26px] mb-16 md:hidden md:invisible"><?php echo esc_html( 'It\'s not just about clothes.' ); ?><br><?php echo esc_html( 'It\'s a vibe, a movement.' ); ?></p>
@@ -80,61 +80,41 @@
 			endif;
 			?>
 		</div>
-		<div class="w-full h-full absolute  left-0 right-0 top-0 hidden invisible xl:block xl:visible">
-			<div class="fixed top-0 right-0 bottom-0 flex flex-col items-end justify-between z-[99]">
-				<figure class="p-6 relative z-[99]">
-					<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/globe.svg' ) ); ?>" alt="hero img" class="object-cover w-full h-full">
-				</figure>
-				<nav class="main-nav">
-					<?php
-						wp_nav_menu(
-							array(
-								'menu'            => 'main-menu',
-								'menu_id'         => 'main-menu',
-								'container'       => false,
-								'container_class' => '',
-								'theme_location'  => 'main-menu',
-								'fallback_cb'     => '__return_false',
-							)
-						);
-					?>
-				</nav>
-			</div>
-		</div>
+		<?php get_template_part( 'template-parts/components/vertical-navigation' ); ?>
 	</aside>
 
-
 </section>
-<div class="w-full xl:hidden xl:invisible mb-32 px-8 xl:px-16">
-		<section class="section-about-the-project  mb-32">
-			<h2 class="font-neueMachina font-normal text-red text-[22px] leading-[29px] uppercase mb-9">About the project</h2>
-			<p class="font-neueMachina font-normal text-light text-[18px] leading-[29px]"><?php the_field( 'about_the_project_description' ); ?></p>
-		</section>
 
-		<?php
-		if ( have_rows( 'videos_video' ) ) :
-			?><section class="section-videos mb-32 "><?php
-			while ( have_rows( 'videos_video' ) ) :
-				the_row();
-				?>
-				<div class="video-wrapper mb-28">
-					<h2 class="font-neueMachina font-normal text-red text-[22px] leading-[29px] uppercase mb-9"><?php the_sub_field( 'title' ); ?></h2>
-					<div class="embed-container">
-						<?php
-						$vfile = get_sub_field( 'video' );
-						if ( $vfile ) :
-							?>
-							<video controls>
-								<source src="<?php echo $vfile['url']; ?>">
-							</video>
-							<?php
-						endif;
+<div class="w-full xl:hidden xl:invisible mb-32 px-8 xl:px-16">
+	<section class="section-about-the-project  mb-32">
+		<h2 class="font-neueMachina font-normal text-red text-[22px] leading-[29px] uppercase mb-9">About the project</h2>
+		<p class="font-neueMachina font-normal text-light text-[18px] leading-[29px]"><?php the_field( 'about_the_project_description' ); ?></p>
+	</section>
+
+	<?php
+	if ( have_rows( 'videos_video' ) ) :
+		?><section class="section-videos mb-32 "><?php
+		while ( have_rows( 'videos_video' ) ) :
+			the_row();
+			?>
+			<div class="video-wrapper mb-28">
+				<h2 class="font-neueMachina font-normal text-red text-[22px] leading-[29px] uppercase mb-9"><?php the_sub_field( 'title' ); ?></h2>
+				<div class="embed-container">
+					<?php
+					$vfile = get_sub_field( 'video' );
+					if ( $vfile ) :
 						?>
-					</div>
+						<video controls>
+							<source src="<?php echo $vfile['url']; ?>">
+						</video>
+						<?php
+					endif;
+					?>
 				</div>
-				<?php
-			endwhile;
-			?></section><?php
-		endif;
-		?>
-	</div>
+			</div>
+			<?php
+		endwhile;
+		?></section><?php
+	endif;
+	?>
+</div>

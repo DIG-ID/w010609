@@ -1,5 +1,5 @@
 <section id="the-collection" class="wrapper flex bg-[#D9D9D9]">
-	<div class="w-full md:w-1/3 xl:w-2/3 hidden md:block bg-red pt-[69px] md:pt-[80px]">
+	<div class="w-full md:w-1/3 xl:w-2/3 hidden md:block bg-red navigation-bumper">
 		<div class="collection__list bg-red pb-14 pt-64 xl:py-14 px-7 xl:px-14">
 		<?php
 		$args = array(
@@ -84,7 +84,7 @@
 		?>
 		</div>
 	</div>
-	<aside class="bg-[#D9D9D9] w-full md:w-2/3 xl:w-1/3 relative xl:fixed right-0 top-0 h-full pt-[69px] md:pt-[80px] overflow-hidden">
+	<aside class="bg-[#D9D9D9] w-full md:w-2/3 xl:w-1/3 relative xl:fixed right-0 top-0 h-full overflow-hidden navigation-bumper">
 		<div class="pt-16 xl:pt-4 pb-11 px-4 md:pl-8 md:pr-6 border-b-2 border-red">
 			<p class="font-neueMachina uppercase text-red text-[22px] leading-[26px] mb-16 md:hidden md:invisible"><?php echo esc_html( 'It\'s not just about clothes.' ); ?><br><?php echo esc_html( 'It\'s a vibe, a movement.' ); ?></p>
 			<h1 class="font-neueMachina uppercase text-[27px] xl:text-[70px] text-red leading-[30px] xl:leading-none font-extrabold"><?php echo esc_html( 'The' ); ?><br><?php echo esc_html( 'Collection' ); ?></h1>
@@ -130,6 +130,7 @@
 								</div>
 							<?php endif; ?>
 							<p class=" font-neueMachina text-red text-[16px] xl:text-[36px] leading-[23px] xl:leading-none font-extrabold uppercase mt-8"><?php echo get_field( 'price' ); ?></p>
+							<a href="<?php echo get_field( 'isa_url' ); ?>" target="_blank" class=" font-neueMachina text-[18px] leading-[30px] font-extrabold uppercase"><?php echo esc_html( 'Official ISA bodywear Shop >>' ) ?></a>
 						</div>
 					<?php
 					$title_id++; // Increment title ID
@@ -139,28 +140,6 @@
 			endif;
 			?>
 		</div>
-
-
-		<div class="h-full absolute z-10 right-0 top-0 hidden invisible xl:block xl:visible">
-			<div class="fixed top-0 right-0 bottom-0 flex flex-col items-end justify-between">
-				<figure class="p-6">
-					<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/globe.svg' ) ); ?>" alt="hero img" class="object-cover w-full h-full">
-				</figure>
-				<nav class="main-nav">
-					<?php
-						wp_nav_menu(
-							array(
-								'menu'            => 'main-menu',
-								'menu_id'         => 'main-menu',
-								'container'       => false,
-								'container_class' => '',
-								'theme_location'  => 'main-menu',
-								'fallback_cb'     => '__return_false',
-							)
-						);
-					?>
-				</nav>
-			</div>
-		</div>
+		<?php get_template_part( 'template-parts/components/vertical-navigation' ); ?>
 	</aside>
 </section>

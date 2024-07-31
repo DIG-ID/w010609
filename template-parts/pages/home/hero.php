@@ -1,6 +1,6 @@
-<section class="section-hero flex overflow-hidden flex-col lg:flex-row">
+<section class="section-hero flex overflow-hidden flex-col xl:flex-row">
 
-	<div class="section-hero--right-wrapper w-full lg:w-2/3 relative pt-[354px] transition-all duration-700 ease-in-out">
+	<div class="section-hero--right-wrapper w-full xl:w-2/3 relative pt-[354px] transition-all duration-700 ease-in-out">
 		<!--<p class="section-hero--vertical-note absolute left-8 top-36 hidden invisible lg:block lg:visible"><?php the_field( 'hero_vertical_note' ); ?></p>.-->
 		<div class="section-hero--fixed-numbers">
 			<p class="flex justify-between"><span>0</span><span>1</span></p>
@@ -43,7 +43,7 @@
 
 	</div><!-- .hero-content-right-wrapper -->
 
-	<aside class="section-hero--left-wrapper w-full lg:w-1/3 relative hidden invisible lg:block lg:visible bg-light">
+	<aside class="section-hero--left-wrapper w-full xl:w-1/3 relative hidden invisible xl:block xl:visible bg-light">
 		<figure class="min-h-dvh">
 			<?php
 			$image01 = get_field( 'hero_image_1' );
