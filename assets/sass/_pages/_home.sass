@@ -17,9 +17,7 @@
       @apply font-black
 
 .section-hero--right-wrapper.header-shrink
-  @apply pt-[168px]
-
-
+  @apply pt-[183px]
 
 .section-the-collection
   &:hover
@@ -40,22 +38,17 @@
         @apply translate-x-0 opacity-100
 
 
-@keyframes shopbtn-text-slide
+@keyframes text-slider
   from
-    transform: translateY(0)
+    transform: translateY(-100%)
   to
-    transform: translateY(100%)
+    transform: translateY(0)
 
-.shop-btn-slider
-  .text-slide
-    display: inline-block
-    animation: 20s shopbtn-text-slide infinite linear
-  &:hover
-    .text-slide
-       animation-play-state: paused
 
 .text-slider
-
-  //text-orientation: mixed
-  //writing-mode: vertical-rl
-  //animation: 20s shopbtn-text-slide infinite linear
+  @apply flex flex-col gap-y-3 absolute left-0 top-0
+  .text-slider-content
+    //@apply rotate-90
+    text-orientation: sideways-right
+    writing-mode: vertical-lr
+    animation: 20s text-slider infinite linear

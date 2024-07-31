@@ -37,13 +37,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if ( $(".page-template-page-home")[0] ) {
       //slider text
-      var shopBtnSlider = document.querySelector(".text-slider");
-      var shopBtnContent = document.querySelector(".text-slider-img");
-      var numberOfCopies = 3;  // Number of times to append the content
+      var textSlider = document.querySelector(".text-slider");
+      console.log(textSlider );
+      var sliderContent = document.querySelector(".text-slider-content");
+      var numberOfCopies = 6;  // Number of times to append the content
 
       for (var i = 0; i < numberOfCopies; i++) {
-          var shopBtnContentCopy = shopBtnContent.cloneNode(true);
-          shopBtnSlider.appendChild(shopBtnContentCopy);
+        var sliderContent = sliderContent.cloneNode(true);
+        textSlider.appendChild(sliderContent);
       }
 
       //header shrink on scroll
