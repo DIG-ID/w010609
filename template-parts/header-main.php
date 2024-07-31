@@ -1,6 +1,6 @@
 <header id="header-main" class="bg-red md:bg-[#d9d9d9] flex items-center fixed z-40 top-0 left-0 right-0 w-full transition-all duration-500 ease-in-out" itemscope itemtype="http://schema.org/WebSite">
 
-	<div class="w-full md:w-1/3 xl:w-2/3 bg-red flex justify-start md:justify-center py-6 pl-5 md:pl-0">
+	<div class="header-main--left w-full md:w-1/3 xl:w-2/3 bg-red flex justify-start md:justify-center py-6 pl-5 md:pl-0">
 		<a class="inline-block z-40" href="<?php echo esc_url( get_bloginfo( 'url' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
 			<svg viewBox="0 0 1120 162" fill="none" xmlns="http://www.w3.org/2000/svg" class="header-logo transition-all duration-500 ease-in-out w-[157px] md:w-[211px] xl:w-[248px] object-cover max-w-full z-40">
 				<path d="M142.724 157.36C115.325 157.36 87.9268 157.662 60.5886 157.299C24.2989 156.876 0.831638 124.699 0.22681 74.9821C-0.0151207 56.9583 -0.196569 38.8739 0.408259 20.9106C1.01309 1.67704 9.54115 -5.03654 21.9401 4.39877C49.8227 25.7492 63.6732 51.6358 104.681 70.3854C114.842 75.0426 118.773 91.6149 124.64 103.469C134.922 124.397 153.913 134.195 171.03 125.727C182.28 120.163 188.147 108.913 188.812 92.764C189.175 83.7521 187.602 74.1958 189.356 65.8492C189.538 65.063 189.719 64.2767 189.961 63.5509C193.046 53.2688 208.348 54.1761 209.981 64.821C209.981 64.8815 209.981 64.942 209.981 65.063C211.735 77.7643 210.646 91.3125 210.465 104.498C210.283 117.32 213.912 126.574 223.65 126.392C229.819 125.788 233.69 121.372 235.081 104.558C236.291 90.4052 234.597 75.345 236.17 61.0711C236.17 60.5267 236.291 60.0429 236.472 59.559C238.952 49.8213 253.287 49.5189 256.129 59.1356C256.371 59.8614 256.492 60.6477 256.553 61.434C257.823 82.1191 257.641 103.046 256.855 123.792C256.069 144.9 246.15 156.815 229.456 157.118C200.546 157.602 171.635 157.239 142.724 157.239V157.36Z" fill="#141414"/>
@@ -14,7 +14,7 @@
 		</a>
 	</div>
 
-	<div class="flex items-center justify-between pr-5 md:px-8 grow">
+	<div class="header-main--right flex items-center justify-between pr-5 md:px-8 grow">
 		<p class="font-neueMachina uppercase text-red text-[22px] leading-[26px] hidden invisible md:block md:visible"><?php echo esc_html( 'It\'s not just about clothes.' ); ?><br><?php echo esc_html( 'It\'s a vibe, a movement.' ); ?></p>
 
 		<button class="menu-toggle block visible xl:hidden xl:invisible">

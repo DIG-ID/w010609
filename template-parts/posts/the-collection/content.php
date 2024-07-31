@@ -3,7 +3,10 @@
 
 		<div class="bg-[#D9D9D9] pt-4 pb-11 pl-8 pr-6 border-b-2 border-red block md:hidden">
 			<p class="font-neueMachina uppercase text-red text-[22px] leading-[26px] mb-16 md:invisible md:hidden"><?php echo esc_html( 'It\'s not just about clothes.' ); ?><br><?php echo esc_html( 'It\'s a vibe, a movement.' ); ?></p>
-			<h1 class="font-neueMachina uppercase text-[27px] xl:text-[62px] 2xl:text-[70px] text-red leading-none font-extrabold"><?php echo esc_html( 'The' ); ?><br><?php echo esc_html( 'Collection' ); ?></h1>
+			<div class="flex justify-between items-center">
+				<h1 class="font-neueMachina uppercase text-[27px] xl:text-[62px] 2xl:text-[70px] text-red leading-none font-extrabold"><?php echo esc_html( 'The' ); ?><br><?php echo esc_html( 'Collection' ); ?></h1>
+				<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/globe.svg' ) ); ?>" alt="globe icon" class="object-cover w-full h-full max-w-[49px] xl:hidden xl:invisible">
+			</div>
 		</div>
 
 		<div class="collection__list bg-red py-14 px-9 h-full flex flex-col xl:flex-row justify-start xl:justify-center">
@@ -39,7 +42,10 @@
 
 		<div class="pt-4 pb-11 pl-8 pr-6 border-b-2 border-red hidden md:block">
 			<p class="font-neueMachina uppercase text-red text-[22px] leading-[26px] mb-16 md:invisible md:hidden"><?php echo esc_html( 'It\'s not just about clothes.' ); ?><br><?php echo esc_html( 'It\'s a vibe, a movement.' ); ?></p>
-			<h1 class="font-neueMachina uppercase text-[27px] xl:text-[62px] 2xl:text-[70px] text-red leading-none font-extrabold"><?php echo esc_html( 'The' ); ?><br><?php echo esc_html( 'Collection' ); ?></h1>
+			<div class="flex justify-between items-center">
+				<h1 class="font-neueMachina uppercase text-[27px] xl:text-[62px] 2xl:text-[70px] text-red leading-none font-extrabold"><?php echo esc_html( 'The' ); ?><br><?php echo esc_html( 'Collection' ); ?></h1>
+				<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/globe.svg' ) ); ?>" alt="globe icon" class="object-cover w-full h-full max-w-[49px] xl:hidden xl:invisible">
+			</div>
 		</div>
 
 		<div class="py-11 pl-8 pr-20">
