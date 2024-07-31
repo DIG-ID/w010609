@@ -1,4 +1,4 @@
-<footer id="main-footer" class="bg-red text-dark py-6 px-4 md:px-5 lg:px-8 relative z-10">
+<footer id="main-footer" class="bg-red text-dark py-6 px-4 md:px-5 lg:px-8 relative z-[60]">
 	<div class="grid grid-col-2 xl:flex xl:justify-between xl:items-end ">
 		<div class="footer-logo col-span-1">
 			<svg viewBox="0 0 365 53" fill="none" xmlns="http://www.w3.org/2000/svg" class="object-cover max-w-full w-[159px] md:w-[180px]">
@@ -25,8 +25,8 @@
 				);
 			?>
 		</div>
-		<div class="devby flex justify-end items-center col-span-2 mt-40 xl:mt-0">
-			<p class="font-neueMachina font-bold text-base text-dark uppercase xl:mr-6"><?php esc_html_e( 'Design & development by:', 'w010609' ); ?>
+		<div class="devby flex justify-center md:justify-end items-center col-span-2 mt-40 xl:mt-0">
+			<p class="font-neueMachina font-bold text-sm md:text-base text-dark uppercase"><?php esc_html_e( 'Design & development by:', 'w010609' ); ?>
 				<a href="https::/dig.id" target="_blank" class="lowercase font-normal">
 					dig.id
 				</a>

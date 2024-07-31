@@ -18,3 +18,9 @@
     &::after
       content: '>>'
       @apply transition-all duration-700 ease-in-out
+
+@media ( max-width: 1280px )
+  .btn
+    &--vertical
+      &::after
+        right: calc( 100% - 35px )

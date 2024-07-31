@@ -17,15 +17,20 @@
         a
           @apply text-red
 
+#header-main
+  .mega-menu
+    @apply top-[71px] md:top-[77px] xl:top-[84px]
+
+
 .mega-menu
-  height: calc( 100dvh - 84px )
-.mega-nav
-  @apply px-4 py-6
-  #mega-menu
-    @apply flex flex-col text-right
-    .menu-item
-      a
-        @apply font-monumentExtend font-bold text-lg text-dark uppercase
+  @apply bg-red w-full absolute left-0 right-0 top-[54px] md:top-[78px] xl:top-[84px] hidden z-10 overflow-hidden h-[400px] md:h-[500]
+  .mega-nav
+    @apply  h-full flex flex-col justify-end px-4 py-6
+    #mega-menu
+      @apply flex flex-col text-right
+      .menu-item
+        a
+          @apply font-monumentExtend font-bold text-lg text-dark uppercase
 
 
 .menu-toggle

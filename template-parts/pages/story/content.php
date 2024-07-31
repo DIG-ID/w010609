@@ -47,7 +47,13 @@
 
 		<div class="pt-4 pb-11 pl-8 pr-6 border-b-2 border-red">
 			<p class="font-neueMachina uppercase text-red text-[22px] leading-[26px] mb-16 md:hidden md:invisible"><?php echo esc_html( 'It\'s not just about clothes.' ); ?><br><?php echo esc_html( 'It\'s a vibe, a movement.' ); ?></p>
-			<h1 class="font-neueMachina uppercase text-[27px] xl:text-[62px] 2xl:text-[70px] text-red leading-none font-extrabold"><?php echo esc_html( 'The' ); ?><br><?php echo esc_html( 'Story' ); ?></h1>
+			<div class="flex justify-between items-center">
+				<h1 class="font-neueMachina uppercase text-[27px] xl:text-[62px] 2xl:text-[70px] text-red leading-none font-extrabold"><?php echo esc_html( 'The' ); ?><br><?php echo esc_html( 'Story' ); ?></h1>
+
+				<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/globe.svg' ) ); ?>" alt="globe icon" class="object-cover w-full h-full max-w-[49px] xl:hidden xl:invisible">
+
+			</div>
+
 		</div>
 		<div class="py-11 pl-8 pr-20">
 			<h2 class="font-neueMachina font-extrabold text-base tracking-[8.96px] xl:text-[22px] text-red leading-[29px] xl:tracking-[12.32px] uppercase mb-8">The creators :</h2>
@@ -76,8 +82,9 @@
 			endif;
 			?>
 		</div>
-		<?php get_template_part( 'template-parts/components/vertical-navigation' ); ?>
+
 	</aside>
+	<?php get_template_part( 'template-parts/components/vertical-navigation' ); ?>
 
 </section>
 
@@ -93,8 +100,8 @@
 		while ( have_rows( 'videos_video' ) ) :
 			the_row();
 			?>
-			<div class="video-wrapper mb-28">
-				<h2 class="font-neueMachina font-normal text-red text-base xl:text-[22px] leading-[29px] uppercase mb-9"><?php the_sub_field( 'title' ); ?></h2>
+			<div class="video-wrapper mb-10 md:mb-28">
+				<h2 class="font-neueMachina font-normal text-red text-base xl:text-[22px] leading-[29px] uppercase mb-6 md:mb-9"><?php the_sub_field( 'title' ); ?></h2>
 				<div class="embed-container">
 					<?php
 					$vfile = get_sub_field( 'video' );

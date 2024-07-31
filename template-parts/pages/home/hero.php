@@ -1,6 +1,6 @@
 <section class="section-hero flex overflow-hidden flex-col xl:flex-row">
 
-	<div class="section-hero--right-wrapper w-full xl:w-2/3 relative pt-[224px] md:pt-[271px] xl:pt-[354px] transition-all duration-700 ease-in-out">
+	<div class="section-hero--right-wrapper w-full xl:w-2/3 relative pt-[160px] md:pt-[271px] xl:pt-[354px] transition-all duration-700 ease-in-out">
 		<!--<p class="section-hero--vertical-note absolute left-8 top-36 hidden invisible lg:block lg:visible"><?php the_field( 'hero_vertical_note' ); ?></p>.-->
 		<div class="section-hero--fixed-numbers">
 			<p class="flex justify-between"><span>0</span><span>1</span></p>
@@ -18,13 +18,13 @@
 				</h1>
 			</div><!-- .hero-content-right--section-01 -->
 			<div class="section-hero-image-mobile relative lg:hidden lg:invisible overflow-hidden">
-				<figure class="p-6 absolute right-0 top-0">
-					<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/globe.svg' ) ); ?>" alt="hero img" class="object-cover w-full h-full">
+				<figure class="pt-4 pr-3 md:pt-4 md:pr-4 absolute right-0 top-0">
+					<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/globe.svg' ) ); ?>" alt="hero img" class="object-cover w-full h-full max-w-[47px] md:max-w-[90px]">
 				</figure>
 				<div class="text-slider-mobile">
 					<?php get_template_part( 'template-parts/components/text-slider-content' ); ?>
 				</div>
-				<figure class="min-h-dvh">
+				<figure class="h-full">
 					<?php
 					$image01 = get_field( 'hero_image_1' );
 					if ( $image01 ) {

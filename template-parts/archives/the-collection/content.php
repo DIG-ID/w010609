@@ -140,6 +140,6 @@
 			endif;
 			?>
 		</div>
-		<?php get_template_part( 'template-parts/components/vertical-navigation' ); ?>
 	</aside>
+	<?php get_template_part( 'template-parts/components/vertical-navigation' ); ?>
 </section>
