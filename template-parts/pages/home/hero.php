@@ -44,22 +44,25 @@
 	</div><!-- .hero-content-right-wrapper -->
 
 	<aside class="section-hero--left-wrapper w-full xl:w-1/3 relative hidden invisible xl:block xl:visible bg-light">
-		<figure class="min-h-dvh">
-			<?php
-			$image01 = get_field( 'hero_image_1' );
-			if ( $image01 ) {
-				echo wp_get_attachment_image( $image01, 'full', false, array( 'class' => 'object-cover w-full h-full  min-h-dvh' ) );
-			}
-			?>
-		</figure>
-		<figure class="min-h-dvh">
-			<?php
-			$image02 = get_field( 'hero_image_2' );
-			if ( $image02 ) {
-				echo wp_get_attachment_image( $image02, 'full', false, array( 'class' => 'object-cover w-full h-full  min-h-dvh' ) );
-			}
-			?>
-		</figure>
+		<div class="flex flex-col h-full">
+			<figure class="min-h-dvh h-full">
+				<?php
+				$image01 = get_field( 'hero_image_1' );
+				if ( $image01 ) {
+					echo wp_get_attachment_image( $image01, 'full', false, array( 'class' => 'object-cover w-full h-full  min-h-dvh' ) );
+				}
+				?>
+			</figure>
+			<figure class="min-h-dvh h-full">
+				<?php
+				$image02 = get_field( 'hero_image_2' );
+				if ( $image02 ) {
+					echo wp_get_attachment_image( $image02, 'full', false, array( 'class' => 'object-cover w-full h-full  min-h-dvh' ) );
+				}
+				?>
+			</figure>
+		</div>
+
 		<div class="w-full h-full absolute z-10 left-0 right-0 top-0">
 
 			<div class="text-slider">
