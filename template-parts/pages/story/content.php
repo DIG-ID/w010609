@@ -1,4 +1,4 @@
-<section class="section-the-story flex flex-col md:flex-row xl:flex-row relative">
+<section class="section-the-story flex flex-col md:flex-row">
 	<div class="w-full md:w-1/3 xl:w-2/3 px-8 xl:px-16 pb-16 order-2 md:order-1 navigation-bumper">
 		<div class="flex md:flex-col xl:flex-row mb-16 xl:mb-52">
 			<div class="section-the-story--content mt-10 xl:mt-20 w-full xl:pr-12 order-2 xl:order-1">
@@ -43,7 +43,7 @@
 
 	</div>
 
-	<aside class="w-full md:w-2/3 xl:w-1/3 relative xl:fixed right-0 top-0 h-full bg-light order-1 md:order-2 navigation-bumper z-10">
+	<aside class="w-full md:w-2/3 xl:w-1/3 relative xl:fixed right-0 top-0 h-full bg-light order-1 md:order-2 navigation-bumper">
 
 		<div class="pt-4 pb-11 pl-8 pr-6 border-b-2 border-red">
 			<p class="font-neueMachina uppercase text-red text-[22px] leading-[26px] mb-16 md:hidden md:invisible"><?php echo esc_html( 'It\'s not just about clothes.' ); ?><br><?php echo esc_html( 'It\'s a vibe, a movement.' ); ?></p>
@@ -59,10 +59,10 @@
 					// Load sub field value.
 					$creator_img = get_sub_field( 'image' );
 					?>
-					<li class="flex items-start gap-x-9 mb-8">
+					<li class="flex flex-col md:flex-row items-start gap-x-9 mb-8">
 						<?php
 						if ( $creator_img ) :
-							echo wp_get_attachment_image( $creator_img, 'full', false, array( 'class' => 'object-cover max-w-full h-auto grayscale' ) );
+							echo wp_get_attachment_image( $creator_img, 'full', false, array( 'class' => 'object-cover max-w-full h-auto grayscale mb-6 md:mb-0' ) );
 						endif;
 						?>
 						<div class="creators-content max-w-[322px]">

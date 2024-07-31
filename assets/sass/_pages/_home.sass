@@ -9,7 +9,7 @@
       text-orientation: mixed
       writing-mode: vertical-rl
   &--fixed-numbers
-      @apply font-neueMachina text-[8px] xl:text-lg text-light tracking-[1.62px] fixed w-full lg:w-2/3 h-2/3 left-0 right-0 bottom-0 px-2 xl:px-6 flex flex-col justify-between prevent-select transition-all duration-300 ease-in-out py-20
+      @apply font-neueMachina text-[8px] xl:text-lg text-light tracking-[1.62px] fixed w-full xl:w-2/3 h-2/3 left-0 right-0 bottom-0 px-2 xl:px-6 flex flex-col justify-between prevent-select transition-all duration-300 ease-in-out py-20
       z-index: -1
   &--title
     @apply font-monumentExtend font-extralight text-light text-[27px] leading-6 md:text-[48px] md:leading-[45px] lg:text-[82px] lg:leading-[76px] uppercase
@@ -17,7 +17,7 @@
       @apply font-black
 
 .section-hero--right-wrapper.header-shrink
-  @apply pt-[183px]
+  @apply pt-[200px] xl:pt-[183px]
 
 .section-the-collection
   &:hover
@@ -44,8 +44,15 @@
   to
     transform: translateY(0)
 
-
 .text-slider
+  @apply flex flex-col gap-y-6 absolute left-0 top-0
+  .text-slider-content
+    //@apply rotate-90
+    text-orientation: sideways-right
+    writing-mode: vertical-rl
+    animation: 20s text-slider infinite linear
+
+.text-slider-mobile
   @apply flex flex-col gap-y-6 absolute left-0 top-0
   .text-slider-content
     //@apply rotate-90

@@ -38,7 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if ( $(".page-template-page-home")[0] ) {
       //slider text
       var textSlider = document.querySelector(".text-slider");
-      console.log(textSlider );
       var sliderContent = document.querySelector(".text-slider-content");
       var numberOfCopies = 6;  // Number of times to append the content
 
@@ -47,11 +46,20 @@ document.addEventListener("DOMContentLoaded", () => {
         textSlider.appendChild(sliderContent);
       }
 
+      //slider text
+      var textSliderMob = document.querySelector(".text-slider-mobile");
+      var sliderContentMob = document.querySelector(".text-slider-mobile > .text-slider-content");
+      var numberOfCopies = 6;  // Number of times to append the content
+
+      for (var i = 0; i < numberOfCopies; i++) {
+        var sliderContentMob = sliderContentMob.cloneNode(true);
+        textSliderMob.appendChild(sliderContentMob);
+      }
+
       //header shrink on scroll
       lenis.on( 'scroll',  ({ scroll }) => {
         var header = $('#header-home');
         var hero = $('.section-hero--right-wrapper');
-        var logo = $('.header-logo');
         var scrollTop = $(window).scrollTop();
         var threshold = 0; 
         //var isSticky = header.hasClass('sticky');

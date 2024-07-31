@@ -1,4 +1,4 @@
-<header id="header-home" class="bg-red flex xl:justify-center items-center py-20 xl:py-24 px-5 md:px-7 xl:px-9 fixed z-40 left-0 right-0 w-full lg:w-2/3 transition-all duration-500 ease-in-out" itemscope itemtype="http://schema.org/WebSite">
+<header id="header-home" class="bg-red flex xl:justify-center items-center py-20 xl:py-24 px-5 md:px-7 xl:px-9 fixed z-40 left-0 right-0 w-full xl:w-2/3 transition-all duration-500 ease-in-out" itemscope itemtype="http://schema.org/WebSite">
 	<button class="menu-toggle block visible xl:hidden xl:invisible">
 		<span class="bar"></span>
 		<span class="bar"></span>

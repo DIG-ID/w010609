@@ -16,7 +16,9 @@
 			</div>
 			<div class="w-full lg:w-2/3 bg-red text-dark px-4 py-6 lg:px-14 lg:py-16 order-1 lg:order-2">
 				<div class="flex flex-col h-80 lg:h-full justify-between">
-					<h2 class="btn--vertical text-dark lg:mb-32"><?php the_field( 'the_story_title' ); ?></h2>
+					<div>
+						<h2 class="btn--vertical text-dark lg:mb-32"><?php the_field( 'the_story_title' ); ?></h2>
+					</div>
 					<p class="text-description text-dark max-w-52 lg:max-w-xl self-end"><?php the_field( 'the_story_description' ); ?></p>
 				</div>
 
