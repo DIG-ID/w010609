@@ -130,7 +130,7 @@
 								</div>
 							<?php endif; ?>
 							<p class=" font-neueMachina text-red text-[16px] xl:text-[36px] leading-[23px] xl:leading-none font-extrabold uppercase mt-8"><?php echo get_field( 'price' ); ?></p>
-							<a href="<?php echo get_field( 'isa_url' ); ?>" target="_blank" class=" font-neueMachina text-[18px] leading-[30px] font-extrabold uppercase"><?php echo esc_html( 'Official ISA bodywear Shop >>' ) ?></a>
+							<a href="<?php echo get_field( 'isa_url' ); ?>" target="_blank" class=" font-neueMachina text-[18px] leading-[30px] font-extrabold uppercase transition-all duration-300 ease-in-out hover:text-red"><?php echo esc_html( 'Official ISA bodywear Shop >>' ) ?></a>
 						</div>
 					<?php
 					$title_id++; // Increment title ID

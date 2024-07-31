@@ -43,47 +43,50 @@
 		</div>
 
 		<div class="py-11 pl-8 pr-20">
-				<div class="dynamic-title-container">
-						<h2 class="font-monumentExtend font-bold text-[22px] leading-[30px] text-dark uppercase"><?php the_title(); ?></h2>
-						<h2 class="font-monumentExtend font-light text-[22px] leading-[30px] text-dark uppercase"><?php echo get_field('type'); ?></h2>
-						<div class="description-overview font-neueMachina text-[18px] font-normal leading-[30px] text-dark mt-8"><?php echo wpautop( get_field( 'description' ) ); ?></div>
-						<div class="features-list font-neueMachina text-[18px] font-normal leading-[30px] text-dark mt-9"><?php echo get_field( 'features_list' ); ?></div>
-						<!-- Display Colors -->
-						<?php if ($colors = get_the_terms(get_the_ID(), 'color')): ?>
-								<div class="colors-list font-neueMachina text-[18px] font-normal leading-[30px] text-dark mt-4">
-										<div class="flex space-x-2">
-												<span class="font-neueMachina text-[18px] leading-[30px] font-extrabold uppercase text-dark">Colors:</span>
-												<?php foreach ($colors as $color): ?>
-														<div class="w-[60px] h-[26px] rounded-full border border-dark <?php echo esc_attr('bg-' . strtolower($color->name)); ?>" title="<?php echo esc_attr($color->name); ?>"></div>
-												<?php endforeach; ?>
-										</div>
-								</div>
-						<?php endif; ?>
-						<!-- Display Sizes -->
-						<?php if ($sizes = get_the_terms(get_the_ID(), 'size')): ?>
-								<div class="sizes-list font-neueMachina text-[18px] font-normal leading-[30px] text-dark mt-4">
-										<span class="font-neueMachina text-[18px] leading-[30px] font-extrabold uppercase text-dark">Sizes:</span>
-										<?php foreach ($sizes as $size): ?>
-												<span><?php echo esc_html($size->name); ?></span>
-										<?php endforeach; ?>
-								</div>
-						<?php endif; ?>
-						<!-- Display Materials -->
-						<?php if ($materials = get_the_terms(get_the_ID(), 'material')): ?>
-								<div class="materials-list font-neueMachina text-[18px] font-normal leading-[30px] text-dark mt-4">
-										<span class="font-neueMachina text-[18px] leading-[30px] font-extrabold uppercase text-dark">Material:</span>
-										<?php foreach ($materials as $material): ?>
-												<span><?php echo esc_html($material->name); ?></span>
-										<?php endforeach; ?>
-								</div>
-						<?php endif; ?>
-						<div class="materials-list font-neueMachina text-[18px] font-normal leading-[30px] text-dark mt-4">
-								<span class="font-neueMachina text-[18px] leading-[30px] font-extrabold uppercase text-dark">Care:</span>
-								<span><?php echo get_field( 'care' ); ?></span>
+			<div class="dynamic-title-container">
+				<h2 class="font-monumentExtend font-bold text-[22px] leading-[30px] text-dark uppercase"><?php the_title(); ?></h2>
+				<h2 class="font-monumentExtend font-light text-[22px] leading-[30px] text-dark uppercase"><?php echo get_field( 'type' ); ?></h2>
+				<div class="description-overview font-neueMachina text-[18px] font-normal leading-[30px] text-dark mt-8"><?php echo wpautop( get_field( 'description' ) ); ?></div>
+				<div class="features-list font-neueMachina text-[18px] font-normal leading-[30px] text-dark mt-9"><?php echo get_field( 'features_list' ); ?></div>
+				<!-- Display Colors -->
+				<?php if ( $colors = get_the_terms( get_the_ID(), 'color' ) ) : ?>
+					<div class="colors-list font-neueMachina text-[18px] font-normal leading-[30px] text-dark mt-4">
+						<div class="flex space-x-2">
+							<span class="font-neueMachina text-[18px] leading-[30px] font-extrabold uppercase text-dark">Colors:</span>
+							<?php foreach ($colors as $color): ?>
+								<div class="w-[60px] h-[26px] rounded-full border border-dark <?php echo esc_attr('bg-' . strtolower($color->name)); ?>" title="<?php echo esc_attr($color->name); ?>"></div>
+							<?php endforeach; ?>
 						</div>
-						<p class="font-neueMachina text-red text-[36px] leading-none font-extrabold uppercase mt-8"><?php echo get_field( 'price' ); ?></p>
-						<a href="<?php echo get_field( 'isa_url' ); ?>" target="_blank" class=" font-neueMachina text-[18px] leading-[30px] font-extrabold uppercase"><?php echo esc_html( 'Official ISA bodywear Shop >>' ) ?></a>
-				</div>  
+					</div>
+				<?php endif; ?>
+				<!-- Display Sizes -->
+				<?php if ( $sizes = get_the_terms( get_the_ID(), 'size' ) ) : ?>
+					<div class="sizes-list font-neueMachina text-[18px] font-normal leading-[30px] text-dark mt-4">
+						<span class="font-neueMachina text-[18px] leading-[30px] font-extrabold uppercase text-dark">Sizes:</span>
+						<?php foreach ($sizes as $size): ?>
+							<span><?php echo esc_html( $size->name ); ?></span>
+						<?php endforeach; ?>
+					</div>
+				<?php endif; ?>
+				<!-- Display Materials -->
+				<?php if ( $materials = get_the_terms( get_the_ID(), 'material' ) ) : ?>
+					<div class="materials-list font-neueMachina text-[18px] font-normal leading-[30px] text-dark mt-4">
+						<span class="font-neueMachina text-[18px] leading-[30px] font-extrabold uppercase text-dark">Material:</span>
+						<?php
+							$material_names = array_map( function( $material ) {
+								return esc_html( $material->name );
+							}, $materials );
+							echo implode( ', ', $material_names );
+						?>
+					</div>
+				<?php endif; ?>
+				<div class="materials-list font-neueMachina text-[18px] font-normal leading-[30px] text-dark mt-4">
+						<span class="font-neueMachina text-[18px] leading-[30px] font-extrabold uppercase text-dark">Care:</span>
+						<span><?php echo get_field( 'care' ); ?></span>
+				</div>
+				<p class="font-neueMachina text-red text-[36px] leading-none font-extrabold uppercase mt-8"><?php echo get_field( 'price' ); ?></p>
+				<a href="<?php echo get_field( 'isa_url' ); ?>" target="_blank" class=" font-neueMachina text-[18px] leading-[30px] font-extrabold uppercase transition-all duration-300 ease-in-out hover:text-red"><?php echo esc_html( 'Official ISA bodywear Shop >>' ) ?></a>
+			</div>
 		</div>
 
 		<div class="py-5 pl-8 pr-8 xl:pr-[30%] border-t-2 border-red flex justify-between">
