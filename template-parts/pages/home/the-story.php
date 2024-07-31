@@ -11,7 +11,7 @@
 					?>
 				</figure>
 				<div class="bg-dark text-light px-14 pt-16 pb-12 hidden invisible xl:block xl:visible">
-					<p class="font-monumentExtend font-extralight text-[27px] xl:text-4xl uppercase">A true <br>statement of <span class="font-extrabold">emporwerment.</span></p>
+					<p class="font-monumentExtend font-extralight text-[27px] leading-7 2xl:text-4xl uppercase">A true <br>statement of <span class="font-extrabold">emporwerment.</span></p>
 				</div>
 			</div>
 			<div class="w-full xl:w-2/3 bg-red text-dark px-4 py-6 xl:px-14 xl:py-16 order-1 xl:order-2">
