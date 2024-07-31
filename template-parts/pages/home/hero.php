@@ -1,7 +1,7 @@
 <section class="section-hero flex overflow-hidden flex-col lg:flex-row">
 
 	<div class="section-hero--right-wrapper w-full lg:w-2/3 relative pt-[354px] transition-all duration-700 ease-in-out">
-		<p class="section-hero--vertical-note absolute left-8 top-36 hidden invisible lg:block lg:visible"><?php the_field( 'hero_vertical_note' ); ?></p>
+		<!--<p class="section-hero--vertical-note absolute left-8 top-36 hidden invisible lg:block lg:visible"><?php the_field( 'hero_vertical_note' ); ?></p>.-->
 		<div class="section-hero--fixed-numbers">
 			<p class="flex justify-between"><span>0</span><span>1</span></p>
 			<p class="flex justify-between"><span>0</span><span>6</span></p>

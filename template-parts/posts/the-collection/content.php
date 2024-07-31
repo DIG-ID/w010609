@@ -46,7 +46,7 @@
 				<div class="dynamic-title-container">
 						<h2 class="font-monumentExtend font-bold text-[22px] leading-[30px] text-dark uppercase"><?php the_title(); ?></h2>
 						<h2 class="font-monumentExtend font-light text-[22px] leading-[30px] text-dark uppercase"><?php echo get_field('type'); ?></h2>
-						<div class="description-overview font-neueMachina text-[18px] font-normal leading-[30px] text-dark mt-8"><?php echo get_field( 'description' ); ?></div>
+						<div class="description-overview font-neueMachina text-[18px] font-normal leading-[30px] text-dark mt-8"><?php echo wpautop( get_field( 'description' ) ); ?></div>
 						<div class="features-list font-neueMachina text-[18px] font-normal leading-[30px] text-dark mt-9"><?php echo get_field( 'features_list' ); ?></div>
 						<!-- Display Colors -->
 						<?php if ($colors = get_the_terms(get_the_ID(), 'color')): ?>
