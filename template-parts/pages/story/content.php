@@ -1,4 +1,4 @@
-<section class="section-the-story flex flex-col md:flex-row xl:flex-row">
+<section class="section-the-story flex flex-col md:flex-row xl:flex-row relative">
 	<div class="w-full md:w-1/3 xl:w-2/3 px-8 xl:px-16 pb-16 order-2 md:order-1 navigation-bumper">
 		<div class="flex md:flex-col xl:flex-row mb-16 xl:mb-52">
 			<div class="section-the-story--content mt-10 xl:mt-20 w-full xl:pr-12 order-2 xl:order-1">
@@ -15,7 +15,7 @@
 
 		<section class="section-about-the-project hidden invisible xl:block xl:visible mb-32">
 			<h2 class="font-neueMachina font-normal text-red text-[22px] leading-[29px] uppercase mb-9">About the project</h2>
-			<p class="font-neueMachina font-normal text-light text-[18px] leading-[29px]"><?php the_field( 'about_the_project_description' ); ?></p>
+			<p class="font-neueMachina font-normal text-light text-[18px] leading-[29px] max-w-[728px]"><?php the_field( 'about_the_project_description' ); ?></p>
 		</section>
 
 		<?php
@@ -25,16 +25,12 @@
 				the_row();
 				?>
 				<div class="video-wrapper mb-28">
-					<h2 class="font-neueMachina font-normal text-red text-[22px] leading-[29px] uppercase mb-9"><?php the_sub_field( 'title' ); ?></h2>
+					<h2 class="font-neueMachina font-normal text-red text-base xl:text-[22px] leading-[29px] uppercase mb-9"><?php the_sub_field( 'title' ); ?></h2>
 					<div class="embed-container">
-					<?php
+						<?php
 						$vfile = get_sub_field( 'video' );
 						if ( $vfile ) :
-							?>
-							<video controls>
-								<source src="<?php echo $vfile['url']; ?>">
-							</video>
-							<?php
+							echo $vfile;
 						endif;
 						?>
 					</div>
@@ -47,14 +43,14 @@
 
 	</div>
 
-	<aside class="w-full md:w-2/3 xl:w-1/3 relative xl:fixed right-0 top-0 h-full bg-light z-[1] order-1 md:order-2 navigation-bumper">
+	<aside class="w-full md:w-2/3 xl:w-1/3 relative xl:fixed right-0 top-0 h-full bg-light order-1 md:order-2 navigation-bumper z-10">
 
 		<div class="pt-4 pb-11 pl-8 pr-6 border-b-2 border-red">
 			<p class="font-neueMachina uppercase text-red text-[22px] leading-[26px] mb-16 md:hidden md:invisible"><?php echo esc_html( 'It\'s not just about clothes.' ); ?><br><?php echo esc_html( 'It\'s a vibe, a movement.' ); ?></p>
 			<h1 class="font-neueMachina uppercase text-[27px] xl:text-[62px] 2xl:text-[70px] text-red leading-none font-extrabold"><?php echo esc_html( 'The' ); ?><br><?php echo esc_html( 'Story' ); ?></h1>
 		</div>
 		<div class="py-11 pl-8 pr-20">
-			<h2 class="font-neueMachina font-extrabold text-[22px] text-red leading-[29px] tracking-[12.32px] uppercase mb-8">The creators :</h2>
+			<h2 class="font-neueMachina font-extrabold text-base tracking-[8.96px] xl:text-[22px] text-red leading-[29px] xl:tracking-[12.32px] uppercase mb-8">The creators :</h2>
 			<?php
 			if ( have_rows( 'the_creators_creators_list' ) ) :
 				?><ul class="creatores-list"><?php
@@ -87,7 +83,7 @@
 
 <div class="w-full xl:hidden xl:invisible mb-32 px-8 xl:px-16">
 	<section class="section-about-the-project  mb-32">
-		<h2 class="font-neueMachina font-normal text-red text-[22px] leading-[29px] uppercase mb-9">About the project</h2>
+		<h2 class="font-neueMachina font-normal text-red text-base xl:text-[22px] leading-[29px] uppercase mb-9">About the project</h2>
 		<p class="font-neueMachina font-normal text-light text-[18px] leading-[29px]"><?php the_field( 'about_the_project_description' ); ?></p>
 	</section>
 
@@ -98,16 +94,12 @@
 			the_row();
 			?>
 			<div class="video-wrapper mb-28">
-				<h2 class="font-neueMachina font-normal text-red text-[22px] leading-[29px] uppercase mb-9"><?php the_sub_field( 'title' ); ?></h2>
+				<h2 class="font-neueMachina font-normal text-red text-base xl:text-[22px] leading-[29px] uppercase mb-9"><?php the_sub_field( 'title' ); ?></h2>
 				<div class="embed-container">
 					<?php
 					$vfile = get_sub_field( 'video' );
 					if ( $vfile ) :
-						?>
-						<video controls>
-							<source src="<?php echo $vfile['url']; ?>">
-						</video>
-						<?php
+						echo $vfile;
 					endif;
 					?>
 				</div>
