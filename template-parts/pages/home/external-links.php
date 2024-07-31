@@ -1,8 +1,8 @@
-<section class="section-external-links bg-light md:pt-6 md:pb-24 lg:pt-0 lg:pb-0">
+<section class="section-external-links bg-light md:pt-6 md:pb-24 xl:pt-0 xl:pb-0">
 	<div class="wrapper flex flex-col md:flex-row">
-		<div class="w-full md:w-3/4 lg:w-2/3 pb-40 md:pb-36 order-2 md:order-1">
-			<div class="hidden invisible lg:visible lg:block bg-dark w-full h-64"></div>
-			<div class="external-links--links-wrapper px-4 pt-6 md:pt-0 md:px-14 lg:py-16">
+		<div class="w-full md:w-3/4 xl:w-2/3 pb-40 md:pb-36 order-2 md:order-1">
+			<div class="hidden invisible xl:visible xl:block bg-dark w-full h-64"></div>
+			<div class="external-links--links-wrapper px-4 pt-6 md:pt-0 md:px-14 xl:py-16">
 				<?php
 				if ( have_rows( 'external_links' ) ) :
 					while ( have_rows( 'external_links' ) ) :
@@ -21,8 +21,8 @@
 				?>
 			</div>
 		</div>
-		<div class="w-full md:w-1/4 lg:w-1/3 lg:border-l-2 lg:border-l-dark border-b-2 border-b-dark md:border-b-0 order-1 md:order-2">
-			<figure class="w-full h-full flex flex-col justify-start lg:justify-center items-center py-16 md:py-0">
+		<div class="w-full md:w-1/4 xl:w-1/3 xl:border-l-2 xl:border-l-dark border-b-2 border-b-dark md:border-b-0 order-1 md:order-2">
+			<figure class="w-full h-full flex flex-col justify-start xl:justify-center items-center py-16 md:py-0">
 				<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/smile.png' ) ); ?>" alt="smile">
 			</figure>
 		</div>

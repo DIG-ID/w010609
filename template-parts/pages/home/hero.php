@@ -8,16 +8,16 @@
 			<p class="flex justify-between"><span>0</span><span>9</span></p>
 		</div>
 		<div class="section-hero--content-right">
-			<div class="section-hero--content-right__section-01 lg:h-dvh flex flex-col justify-start relative py-6 px-9 lg:px-16">
+			<div class="section-hero--content-right__section-01 xl:h-dvh flex flex-col justify-start relative py-6 px-9 xl:px-16">
 
 				<figure class="w-full flex justify-end mb-20">
-					<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/smile.png' ) ); ?>" alt="smile" class="object-cover max-w-36 lg:max-w-full">
+					<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/smile.png' ) ); ?>" alt="smile" class="object-cover max-w-36 xl:max-w-full">
 				</figure>
 				<h1 class="section-hero--title">
 					<?php the_field( 'hero_title' ); ?>
 				</h1>
 			</div><!-- .hero-content-right--section-01 -->
-			<div class="section-hero-image-mobile relative lg:hidden lg:invisible overflow-hidden">
+			<div class="section-hero-image-mobile relative xl:hidden xl:invisible overflow-hidden">
 				<figure class="pt-4 pr-3 md:pt-4 md:pr-4 absolute right-0 top-0">
 					<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/globe.svg' ) ); ?>" alt="hero img" class="object-cover w-full h-full max-w-[47px] md:max-w-[90px]">
 				</figure>
@@ -33,10 +33,10 @@
 					?>
 				</figure>
 			</div>
-			<div class="section-hero--content-right__section-02 lg:h-dvh py-12 px-9 lg:px-16">
+			<div class="section-hero--content-right__section-02 xl:h-dvh py-12 px-9 xl:px-16">
 				<div class="flex flex-col justify-between h-full">
-					<p class="text-description text-light text-right max-w-[560px] lg:max-w-3xl self-end mb-[400px]"><?php the_field( 'hero_description_1' ); ?></p>
-					<p class="text-description text-light max-w-[560px] lg:max-w-[728px]"><?php the_field( 'hero_description_2' ); ?></p>
+					<p class="text-description text-light text-right max-w-[560px] xl:max-w-3xl self-end mb-[400px]"><?php the_field( 'hero_description_1' ); ?></p>
+					<p class="text-description text-light max-w-[560px] xlmax-w-[728px]"><?php the_field( 'hero_description_2' ); ?></p>
 				</div>
 			</div><!-- .hero-content-right--section-02 -->
 		</div><!-- .hero-content-right -->
@@ -66,10 +66,10 @@
 				<?php get_template_part( 'template-parts/components/text-slider-content' ); ?>
 			</div>
 			<div class="fixed top-0 right-0 bottom-0 flex flex-col items-end justify-between">
-				<figure class="p-6 invisible hidden lg:block lg:visible">
+				<figure class="p-6 invisible hidden xl:block xl:visible">
 					<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/globe.svg' ) ); ?>" alt="hero img" class="object-cover w-full h-full">
 				</figure>
-				<nav class="main-nav hidden invisible lg:block lg:visible">
+				<nav class="main-nav hidden invisible xl:block xl:visible">
 					<?php
 						wp_nav_menu(
 							array(
