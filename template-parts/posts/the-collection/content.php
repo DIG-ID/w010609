@@ -82,7 +82,7 @@
 								<span><?php echo get_field( 'care' ); ?></span>
 						</div>
 						<p class="font-neueMachina text-red text-[36px] leading-none font-extrabold uppercase mt-8"><?php echo get_field( 'price' ); ?></p>
-						<a href="<?php echo get_field( 'isa_url' ); ?>" class=" font-neueMachina text-[18px] leading-[30px] font-extrabold uppercase"><?php echo esc_html( 'Go to ISA Product Page >>' ) ?></a>
+						<a href="<?php echo get_field( 'isa_url' ); ?>" class=" font-neueMachina text-[18px] leading-[30px] font-extrabold uppercase"><?php echo esc_html( 'Official ISA bodywear Shop >>' ) ?></a>
 				</div>  
 		</div>
 
