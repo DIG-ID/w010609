@@ -43,7 +43,7 @@
 
 	</div>
 
-	<aside class="w-full md:w-2/3 xl:w-1/3 relative xl:fixed right-0 top-0 h-full bg-light order-1 md:order-2 navigation-bumper">
+	<aside class="w-full md:w-2/3 xl:w-1/3 relative xl:fixed right-0 top-0 h-full bg-light order-1 md:order-2 overflow-hidden navigation-bumper">
 
 		<div class="pt-4 pb-11 pl-8 pr-6 border-b-2 border-red">
 			<p class="font-neueMachina uppercase text-red text-[22px] leading-[26px] mb-16 md:hidden md:invisible"><?php echo esc_html( 'It\'s not just about clothes.' ); ?><br><?php echo esc_html( 'It\'s a vibe, a movement.' ); ?></p>
