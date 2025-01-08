@@ -2,7 +2,7 @@
 	<div class="w-full md:w-1/3 xl:w-2/3 navigation-bumper">
 
 		<div class="bg-[#D9D9D9] pt-4 pb-11 pl-8 pr-6 border-b-2 border-red block md:hidden">
-			<p class="font-neueMachina uppercase text-red text-[22px] leading-[26px] mb-16 md:invisible md:hidden"><?php echo esc_html( 'It\'s not just about clothes.' ); ?><br><?php echo esc_html( 'It\'s a vibe, a movement.' ); ?></p>
+			<p class="font-neueMachina uppercase text-red text-base xl:text-[22px] xl:leading-[26px] mb-16 md:invisible md:hidden"><?php echo esc_html( 'It\'s not just about clothes.' ); ?><br><?php echo esc_html( 'It\'s a vibe, a movement.' ); ?></p>
 			<div class="flex justify-between items-center">
 				<h1 class="font-neueMachina uppercase text-[27px] xl:text-[62px] 2xl:text-[70px] text-red leading-none font-extrabold"><?php echo esc_html( 'The' ); ?><br><?php echo esc_html( 'Collection' ); ?></h1>
 				<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/globe.svg' ) ); ?>" alt="globe icon" class="object-cover w-full h-full max-w-[49px] xl:hidden xl:invisible">
@@ -22,7 +22,7 @@
 								<?php endforeach; ?>
 								</div>
 						</div>
-						<div class="swiper swiper-collection order-1 xl:order-2">
+						<div class="swiper swiper-collection order-1 xl:order-2 relative">
 								<div class="swiper-wrapper">
 										<?php foreach( $slider as $slider_id ): ?>
 												<div class="swiper-slide">
@@ -38,7 +38,7 @@
 		</div>
 
 	</div>
-	<aside class="bg-[#D9D9D9] w-full md:w-2/3 xl:w-1/3 navigation-bumper overflow-hidden">
+	<aside class="bg-[#D9D9D9] w-full md:w-2/3 xl:w-1/3 pt-[24px] md:pt-[80px] overflow-hidden">
 
 		<div class="pt-4 pb-11 pl-8 pr-6 border-b-2 border-red hidden md:block">
 			<p class="font-neueMachina uppercase text-red text-[22px] leading-[26px] mb-16 md:invisible md:hidden"><?php echo esc_html( 'It\'s not just about clothes.' ); ?><br><?php echo esc_html( 'It\'s a vibe, a movement.' ); ?></p>
@@ -48,17 +48,17 @@
 			</div>
 		</div>
 
-		<div class="py-11 pl-8 pr-20">
+		<div class="py-0 xl:py-11 pl-8 pr-20">
 			<div class="dynamic-title-container">
-				<h2 class="font-monumentExtend font-bold text-[22px] leading-[30px] text-dark uppercase"><?php the_title(); ?></h2>
-				<h2 class="font-monumentExtend font-light text-[22px] leading-[30px] text-dark uppercase"><?php echo get_field( 'type' ); ?></h2>
-				<div class="description-overview font-neueMachina text-[18px] font-normal leading-[30px] text-dark mt-8"><?php echo wpautop( get_field( 'description' ) ); ?></div>
-				<div class="features-list font-neueMachina text-[18px] font-normal leading-[30px] text-dark mt-9"><?php echo get_field( 'features_list' ); ?></div>
+				<h2 class="font-monumentExtend font-bold text-base xl:text-[22px] leading-[30px] text-dark uppercase"><?php the_title(); ?></h2>
+				<h2 class="font-monumentExtend font-light text-base xl:text-[22px] leading-[30px] text-dark uppercase"><?php echo get_field( 'type' ); ?></h2>
+				<div class="description-overview font-neueMachina text-sm xl:text-[18px] font-normal leading-6 xl:leading-[30px] text-dark mt-8"><?php echo wpautop( get_field( 'description' ) ); ?></div>
+				<div class="features-list font-neueMachina text-sm xl:text-[18px] font-normal leading-[30px] text-dark mt-9"><?php echo get_field( 'features_list' ); ?></div>
 				<!-- Display Colors -->
 				<?php if ( $colors = get_the_terms( get_the_ID(), 'color' ) ) : ?>
 					<div class="colors-list font-neueMachina text-[18px] font-normal leading-[30px] text-dark mt-4">
 						<div class="flex space-x-2">
-							<span class="font-neueMachina text-[18px] leading-[30px] font-extrabold uppercase text-dark">Colors:</span>
+							<span class="font-neueMachina text-sm xl:text-[18px] xç:leading-[30px] font-extrabold uppercase text-dark">Colors:</span>
 							<?php foreach ($colors as $color): ?>
 								<div class="w-[60px] h-[26px] rounded-full border border-dark <?php echo esc_attr('bg-' . strtolower($color->name)); ?>" title="<?php echo esc_attr($color->name); ?>"></div>
 							<?php endforeach; ?>
@@ -68,7 +68,7 @@
 				<!-- Display Sizes -->
 				<?php if ( $sizes = get_the_terms( get_the_ID(), 'size' ) ) : ?>
 					<div class="sizes-list font-neueMachina text-[18px] font-normal leading-[30px] text-dark mt-4">
-						<span class="font-neueMachina text-[18px] leading-[30px] font-extrabold uppercase text-dark">Sizes:</span>
+						<span class="font-neueMachina text-sm xl:text-[18px] xl:leading-[30px] font-extrabold uppercase text-dark">Sizes:</span>
 						<?php foreach ($sizes as $size): ?>
 							<span><?php echo esc_html( $size->name ); ?></span>
 						<?php endforeach; ?>
@@ -77,7 +77,7 @@
 				<!-- Display Materials -->
 				<?php if ( $materials = get_the_terms( get_the_ID(), 'material' ) ) : ?>
 					<div class="materials-list font-neueMachina text-[18px] font-normal leading-[30px] text-dark mt-4">
-						<span class="font-neueMachina text-[18px] leading-[30px] font-extrabold uppercase text-dark">Material:</span>
+						<span class="font-neueMachina text-sm xl:text-[18px] xl:leading-[30px] font-extrabold uppercase text-dark">Material:</span>
 						<?php
 							$material_names = array_map( function( $material ) {
 								return esc_html( $material->name );
@@ -86,12 +86,12 @@
 						?>
 					</div>
 				<?php endif; ?>
-				<div class="materials-list font-neueMachina text-[18px] font-normal leading-[30px] text-dark mt-4">
-						<span class="font-neueMachina text-[18px] leading-[30px] font-extrabold uppercase text-dark">Care:</span>
+				<div class="materials-list font-neueMachina text-sm xl:text-[18px] font-normal xl:leading-[30px] text-dark mt-4">
+						<span class="font-neueMachina text-sm xl:text-[18px] xl:leading-[30px] font-extrabold uppercase text-dark">Care:</span>
 						<span><?php echo get_field( 'care' ); ?></span>
 				</div>
-				<p class="font-neueMachina text-red text-[36px] leading-none font-extrabold uppercase mt-8"><?php echo get_field( 'price' ); ?></p>
-				<a href="<?php echo get_field( 'isa_url' ); ?>" target="_blank" class=" font-neueMachina text-[18px] leading-[30px] font-extrabold uppercase transition-all duration-300 ease-in-out hover:text-red"><?php echo esc_html( 'Official ISA bodywear Shop >>' ) ?></a>
+				<p class="font-neueMachina text-red text-base xl:text-[36px] leading-none font-extrabold uppercase mb-2 mt-8"><?php echo get_field( 'price' ); ?></p>
+				<a href="<?php echo get_field( 'isa_url' ); ?>" target="_blank" class=" font-neueMachina text-[18px] leading-[30px] font-extrabold uppercase transition-all duration-300 ease-in-out hover:text-red"><?php echo esc_html( 'ISA bodywear Shop >>' ) ?></a>
 			</div>
 		</div>
 

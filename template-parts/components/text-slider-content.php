@@ -4,7 +4,7 @@
 			<path d="M35 17.5C20.23 17.5 17.5 20.2321 17.5 35C17.5 20.23 14.7679 17.5 0 17.5C14.77 17.5 17.5 14.7679 17.5 0C17.5 14.77 20.2321 17.5 35 17.5Z" fill="#141414"/>
 		</svg>
 	</span>
-	<span class="ts-text font-monumentExtend font-black text-black text-[21px] leading-[19px] uppercase text-center whitespace-nowrap">
+	<span class="ts-text font-monumentExtend font-black text-black text-base xl:text-[21px] leading-[19px] uppercase text-center whitespace-nowrap">
 		my body <br> my canvas
 	</span>
 	<span class="ts-star">
@@ -22,7 +22,7 @@
 			<path d="M35 17.5C20.23 17.5 17.5 20.2321 17.5 35C17.5 20.23 14.7679 17.5 0 17.5C14.77 17.5 17.5 14.7679 17.5 0C17.5 14.77 20.2321 17.5 35 17.5Z" fill="#141414"/>
 		</svg>
 	</span>
-	<span class="ts-text font-monumentExtend font-black text-black text-[21px] leading-[19px] uppercase text-center whitespace-nowrap">
+	<span class="ts-text font-monumentExtend font-black text-black text-base xl:text-[21px] leading-[19px] uppercase text-center whitespace-nowrap">
 		my body <br> my canvas
 	</span>
 	<span class="ts-star">
@@ -40,7 +40,7 @@
 			<path d="M35 17.5C20.23 17.5 17.5 20.2321 17.5 35C17.5 20.23 14.7679 17.5 0 17.5C14.77 17.5 17.5 14.7679 17.5 0C17.5 14.77 20.2321 17.5 35 17.5Z" fill="#141414"/>
 		</svg>
 	</span>
-	<span class="ts-text font-monumentExtend font-black text-black text-[21px] leading-[19px] uppercase text-center whitespace-nowrap">
+	<span class="ts-text font-monumentExtend font-black text-black text-base xl:text-[21px] leading-[19px] uppercase text-center whitespace-nowrap">
 		my body <br> my canvas
 	</span>
 </div>

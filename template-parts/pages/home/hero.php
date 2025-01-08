@@ -10,8 +10,8 @@
 		<div class="section-hero--content-right">
 			<div class="section-hero--content-right__section-01 xl:h-dvh flex flex-col justify-start relative py-6 px-9 xl:px-16">
 
-				<figure class="w-full flex justify-end mb-20">
-					<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/smile.png' ) ); ?>" alt="smile" class="object-cover max-w-36 xl:max-w-full">
+				<figure class="w-full flex justify-end mb-10 xl:mb-20">
+					<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/smile.png' ) ); ?>" alt="smile" class="object-cover max-w-20 md:max-w-36 xl:max-w-full">
 				</figure>
 				<h1 class="section-hero--title">
 					<?php the_field( 'hero_title' ); ?>
@@ -35,8 +35,8 @@
 			</div>
 			<div class="section-hero--content-right__section-02 xl:h-dvh py-12 px-9 xl:px-16">
 				<div class="flex flex-col justify-between h-full">
-					<p class="text-description text-light text-right max-w-[560px] xl:max-w-3xl self-end mb-[400px]"><?php the_field( 'hero_description_1' ); ?></p>
-					<p class="text-description text-light max-w-[560px] xlmax-w-[728px]"><?php the_field( 'hero_description_2' ); ?></p>
+					<p class="text-description--hero text-light text-right max-w-[560px] xl:max-w-3xl self-end mb-[400px]"><?php the_field( 'hero_description_1' ); ?></p>
+					<p class="text-description--hero text-light max-w-[560px] xl:max-w-[728px]"><?php the_field( 'hero_description_2' ); ?></p>
 				</div>
 			</div><!-- .hero-content-right--section-02 -->
 		</div><!-- .hero-content-right -->

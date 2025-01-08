@@ -2,7 +2,7 @@
 	<div class="wrapper flex flex-col md:flex-row">
 		<div class="w-full md:w-3/4 xl:w-2/3 pb-40 md:pb-36 order-2 md:order-1">
 			<div class="hidden invisible xl:visible xl:block bg-dark w-full h-64"></div>
-			<div class="external-links--links-wrapper px-4 pt-6 md:pt-0 md:px-14 xl:py-16">
+			<div class="external-links--links-wrapper px-4 pt-6 md:pt-0 md:px-8 xl:px-14 xl:py-16">
 				<?php
 				if ( have_rows( 'external_links' ) ) :
 					while ( have_rows( 'external_links' ) ) :
