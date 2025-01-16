@@ -50,13 +50,13 @@
 
 		<div class="py-0 xl:py-11 pl-8 pr-20">
 			<div class="dynamic-title-container">
-				<h2 class="font-monumentExtend font-bold text-base xl:text-[22px] leading-[30px] text-dark uppercase"><?php the_title(); ?></h2>
-				<h2 class="font-monumentExtend font-light text-base xl:text-[22px] leading-[30px] text-dark uppercase"><?php echo get_field( 'type' ); ?></h2>
-				<div class="description-overview font-neueMachina text-sm xl:text-[18px] font-normal leading-6 xl:leading-[30px] text-dark mt-8"><?php echo wpautop( get_field( 'description' ) ); ?></div>
-				<div class="features-list font-neueMachina text-sm xl:text-[18px] font-normal leading-[30px] text-dark mt-9"><?php echo get_field( 'features_list' ); ?></div>
+				<h2 class="font-monumentExtend font-bold text-base xl:text-[22px] leading-[30px] text-dark uppercase hidden"><?php the_title(); ?></h2>
+				<h2 class="font-monumentExtend font-light text-base xl:text-[22px] leading-[30px] text-dark uppercase hidden"><?php echo get_field( 'type' ); ?></h2>
+				<div class="description-overview font-neueMachina text-sm xl:text-[18px] font-normal leading-6 xl:leading-[30px] text-dark mt-8 hidden"><?php echo wpautop( get_field( 'description' ) ); ?></div>
+				<div class="features-list font-neueMachina text-sm xl:text-[18px] font-normal leading-[30px] text-dark mt-9 hidden"><?php echo get_field( 'features_list' ); ?></div>
 				<!-- Display Colors -->
 				<?php if ( $colors = get_the_terms( get_the_ID(), 'color' ) ) : ?>
-					<div class="colors-list font-neueMachina text-[18px] font-normal leading-[30px] text-dark mt-4">
+					<div class="colors-list font-neueMachina text-[18px] font-normal leading-[30px] text-dark mt-4 hidden">
 						<div class="flex space-x-2">
 							<span class="font-neueMachina text-sm xl:text-[18px] xç:leading-[30px] font-extrabold uppercase text-dark">Colors:</span>
 							<?php foreach ($colors as $color): ?>
@@ -67,7 +67,7 @@
 				<?php endif; ?>
 				<!-- Display Sizes -->
 				<?php if ( $sizes = get_the_terms( get_the_ID(), 'size' ) ) : ?>
-					<div class="sizes-list font-neueMachina text-[18px] font-normal leading-[30px] text-dark mt-4">
+					<div class="sizes-list font-neueMachina text-[18px] font-normal leading-[30px] text-dark mt-4 hidden">
 						<span class="font-neueMachina text-sm xl:text-[18px] xl:leading-[30px] font-extrabold uppercase text-dark">Sizes:</span>
 						<?php foreach ($sizes as $size): ?>
 							<span><?php echo esc_html( $size->name ); ?></span>
@@ -76,7 +76,7 @@
 				<?php endif; ?>
 				<!-- Display Materials -->
 				<?php if ( $materials = get_the_terms( get_the_ID(), 'material' ) ) : ?>
-					<div class="materials-list font-neueMachina text-[18px] font-normal leading-[30px] text-dark mt-4">
+					<div class="materials-list font-neueMachina text-[18px] font-normal leading-[30px] text-dark mt-4 hidden">
 						<span class="font-neueMachina text-sm xl:text-[18px] xl:leading-[30px] font-extrabold uppercase text-dark">Material:</span>
 						<?php
 							$material_names = array_map( function( $material ) {
@@ -86,12 +86,12 @@
 						?>
 					</div>
 				<?php endif; ?>
-				<div class="materials-list font-neueMachina text-sm xl:text-[18px] font-normal xl:leading-[30px] text-dark mt-4">
+				<div class="materials-list font-neueMachina text-sm xl:text-[18px] font-normal xl:leading-[30px] text-dark mt-4 hidden">
 						<span class="font-neueMachina text-sm xl:text-[18px] xl:leading-[30px] font-extrabold uppercase text-dark">Care:</span>
 						<span><?php echo get_field( 'care' ); ?></span>
 				</div>
-				<p class="font-neueMachina text-red text-base xl:text-[36px] leading-none font-extrabold uppercase mb-2 mt-8"><?php echo get_field( 'price' ); ?></p>
-				<a href="<?php echo get_field( 'isa_url' ); ?>" target="_blank" class=" font-neueMachina text-[18px] leading-[30px] font-extrabold uppercase transition-all duration-300 ease-in-out hover:text-red"><?php echo esc_html( 'ISA bodywear Shop >>' ) ?></a>
+				<p class="font-neueMachina text-red text-base xl:text-[36px] leading-none font-extrabold uppercase mb-2 mt-8 hidden"><?php echo get_field( 'price' ); ?></p>
+				<a href="<?php echo get_field( 'isa_url' ); ?>" target="_blank" class="hidden font-neueMachina text-[18px] leading-[30px] font-extrabold uppercase transition-all duration-300 ease-in-out hover:text-red"><?php echo esc_html( 'ISA bodywear Shop >>' ) ?></a>
 			</div>
 		</div>
 
