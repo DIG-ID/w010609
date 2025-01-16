@@ -6,18 +6,17 @@ document.addEventListener("DOMContentLoaded", () => {
             const collectionItems = document.querySelectorAll('.collection__item:not(.custom-element)');
             const titleContainers = document.querySelectorAll('.dynamic-title-container');
 
-            // Ensure all title containers are hidden by default
-            titleContainers.forEach(title => title.classList.add('hidden'));
+            // Show the first title container by default
+            if (titleContainers.length > 0) {
+                titleContainers[0].classList.remove('hidden');
+            }
 
             collectionItems.forEach((item, index) => {
                 const link = item.querySelector('a');
 
                 if (link) {
                     link.addEventListener('mouseenter', () => {
-                        // Hide all titles
                         titleContainers.forEach(title => title.classList.add('hidden'));
-
-                        // Show the corresponding title
                         const titleToShow = document.querySelector(`.dynamic-title-container[data-title-id="${index + 1}"]`);
                         if (titleToShow) {
                             titleToShow.classList.remove('hidden');
@@ -33,20 +32,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 const secondImage = container.querySelector('.second-image');
                 const plusInfo = container.querySelector('.plusInfo');
 
-                // Ensure the second image and additional info are hidden by default
-                if (secondImage) secondImage.classList.add('hidden');
-                if (plusInfo) plusInfo.classList.add('hidden');
-
                 container.addEventListener('mouseenter', () => {
-                    if (firstImage) firstImage.classList.add('hidden');
-                    if (secondImage) secondImage.classList.remove('hidden');
-                    if (plusInfo) plusInfo.classList.remove('hidden');
+                    firstImage.classList.add('hidden');
+                    secondImage.classList.remove('hidden');
+                    plusInfo.classList.remove('hidden');
                 });
 
                 container.addEventListener('mouseleave', () => {
-                    if (firstImage) firstImage.classList.remove('hidden');
-                    if (secondImage) secondImage.classList.add('hidden');
-                    if (plusInfo) plusInfo.classList.add('hidden');
+                    firstImage.classList.remove('hidden');
+                    secondImage.classList.add('hidden');
+                    plusInfo.classList.add('hidden');
                 });
             });
         }
