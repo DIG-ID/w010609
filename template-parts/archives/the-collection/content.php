@@ -121,7 +121,7 @@
 							<h2 class="font-monumentExtend font-bold text-[16px] xl:text-[22px] leading-[20px] xl:leading-[30px] text-dark uppercase"><?php the_title(); ?></h2>
 							<h2 class="font-monumentExtend font-light text-[16px] xl:text-[22px] leading-[20px] xl:leading-[30px] text-dark uppercase"><?php echo get_field('type'); ?></h2>
 							<div class="features-list font-neueMachina text-[12px] xl:text-[18px] font-normal leading-[23px] xl:leading-[30px] text-dark mt-9"><?php echo get_field( 'features_list' ); ?></div>
-							<div class="description-overview font-neueMachina text-[18px] font-normal leading-[23px] xl:leading-[30px] text-dark mt-8"><?php echo get_field( 'description' ); ?></div>
+							<div class="description-overview font-neueMachina text-[12px] xl:text-[18px] font-normal !leading-[23px] xl:leading-[30px] text-dark mt-8"><?php echo get_field( 'description' ); ?></div>
 							<?php if ($colors = get_the_terms(get_the_ID(), 'color')): ?>
 								<div class="colors-list font-neueMachina text-[18px] font-normal leading-[30px] text-dark mt-4">
 									<div class="flex space-x-2">
@@ -133,7 +133,7 @@
 								</div>
 							<?php endif; ?>
 							<p class=" font-neueMachina text-red text-[16px] xl:text-[36px] leading-[23px] xl:leading-none font-extrabold uppercase mt-8"><?php echo get_field( 'price' ); ?></p>
-							<a href="<?php echo get_field( 'isa_url' ); ?>" target="_blank" class=" font-neueMachina text-[18px] leading-[30px] font-extrabold uppercase transition-all duration-300 ease-in-out hover:text-red"><?php echo esc_html( 'Official ISA bodywear Shop >>' ) ?></a>
+							<a href="<?php echo get_field( 'isa_url' ); ?>" target="_blank" class=" font-neueMachina text-[18px] leading-[30px] font-extrabold uppercase transition-all duration-300 ease-in-out hover:text-red"><?php echo esc_html( 'ISA bodywear Shop >>' ) ?></a>
 						</div>
 					<?php
 					$title_id++; // Increment title ID
