@@ -1,6 +1,6 @@
 <section id="the-collection" class="wrapper flex bg-[#D9D9D9]">
 	<div class="w-full md:w-1/3 xl:w-2/3 hidden md:block bg-red navigation-bumper">
-		<div class="collection__list bg-red pb-14 pt-64 xl:py-14 px-7 xl:px-14">
+		<div class="collection__list bg-red pb-14 pt-36 xl:py-14 px-7 xl:px-14">
 		<?php
 		$args = array(
 			'post_type'      => 'the-collection',
@@ -85,8 +85,8 @@
 		</div>
 	</div>
 	<aside class="bg-[#D9D9D9] w-full md:w-2/3 xl:w-1/3 relative xl:fixed right-0 top-0 h-full overflow-hidden navigation-bumper">
-		<div class="pt-16 xl:pt-4 pb-11 px-4 md:pl-8 md:pr-6 border-b-2 border-red">
-			<p class="font-neueMachina uppercase text-red text-[22px] leading-[26px] mb-16 md:hidden md:invisible"><?php echo esc_html( 'It\'s not just about clothes.' ); ?><br><?php echo esc_html( 'It\'s a vibe, a movement.' ); ?></p>
+		<div class="pt-4 xl:pt-4 pb-6 md:pb-7 xl:pb-11 px-4 md:pl-8 md:pr-6 border-b-2 border-red">
+			<p class="font-neueMachina uppercase text-red text-[22px] leading-[26px] mb-5 md:mb-16 md:hidden md:invisible"><?php echo esc_html( 'It\'s not just about clothes.' ); ?><br><?php echo esc_html( 'It\'s a vibe, a movement.' ); ?></p>
 			<div class="flex justify-between items-center">
 				<h1 class="font-neueMachina uppercase text-[27px] xl:text-[70px] text-red leading-[30px] xl:leading-none font-extrabold"><?php echo esc_html( 'The' ); ?><br><?php echo esc_html( 'Collection' ); ?></h1>
 				<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/globe.svg' ) ); ?>" alt="globe icon" class="object-cover w-full h-full max-w-[49px] xl:hidden xl:invisible">

@@ -1,15 +1,15 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'wrapper flex flex-col md:flex-row' ); ?>>
 	<div class="w-full md:w-1/3 xl:w-2/3 navigation-bumper">
 
-		<div class="bg-[#D9D9D9] pt-4 pb-11 pl-8 pr-6 border-b-2 border-red block md:hidden">
-			<p class="font-neueMachina uppercase text-red text-base xl:text-[22px] xl:leading-[26px] mb-16 md:invisible md:hidden"><?php echo esc_html( 'It\'s not just about clothes.' ); ?><br><?php echo esc_html( 'It\'s a vibe, a movement.' ); ?></p>
+		<div class="bg-[#D9D9D9] pt-4 pb-6 md:pb-11 px-5 md:pl-8 md:pr-6 border-b-2 border-red block md:hidden">
+			<p class="font-neueMachina uppercase text-red text-base xl:text-[22px] xl:leading-[26px] mb-5 md:mb-16 md:invisible md:hidden"><?php echo esc_html( 'It\'s not just about clothes.' ); ?><br><?php echo esc_html( 'It\'s a vibe, a movement.' ); ?></p>
 			<div class="flex justify-between items-center">
 				<h1 class="font-neueMachina uppercase text-[27px] xl:text-[62px] 2xl:text-[70px] text-red leading-none font-extrabold"><?php echo esc_html( 'The' ); ?><br><?php echo esc_html( 'Collection' ); ?></h1>
 				<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/globe.svg' ) ); ?>" alt="globe icon" class="object-cover w-full h-full max-w-[49px] xl:hidden xl:invisible">
 			</div>
 		</div>
 
-		<div class="collection__list bg-red py-14 px-9 h-full flex flex-col xl:flex-row justify-start xl:justify-center">
+		<div class="collection__list bg-red py-6 md:py-14 px-5 md:px-9 h-full flex flex-col xl:flex-row justify-start xl:justify-center">
 				<?php 
 				$slider = get_field('image_gallery');
 				if( $slider ): ?>
@@ -48,7 +48,7 @@
 			</div>
 		</div>
 
-		<div class="py-0 xl:py-11 pl-8 pr-20">
+		<div class="py-0 xl:py-11 pl-5 md:pl-8 pr-20">
 			<div class="dynamic-title-container">
 				<h2 class="font-monumentExtend font-bold text-base xl:text-[22px] leading-[30px] text-dark uppercase"><?php the_title(); ?></h2>
 				<h2 class="font-monumentExtend font-light text-base xl:text-[22px] leading-[30px] text-dark uppercase"><?php echo get_field( 'type' ); ?></h2>
@@ -95,7 +95,7 @@
 			</div>
 		</div>
 
-		<div class="py-5 pl-8 pr-8 xl:pr-[30%] border-t-2 border-red flex justify-between">
+		<div class="py-5 px-5 md:pl-8 md:pr-8 xl:pr-[30%] border-t-2 border-red flex justify-between">
 			<?php
 			$previous_post = get_previous_post();
 			$next_post = get_next_post();
